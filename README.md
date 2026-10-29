@@ -1,225 +1,183 @@
-# 🧬 Tech Challenge — Fase 1
-## Análise e Classificação de Câncer de Mama
+# 🚚 Tech Challenge — Fase 2
+## Otimização de Rotas para Distribuição de Medicamentos e Insumos Hospitalares
 
-Projeto desenvolvido como parte do **Tech Challenge** da Pós-Graduação em IA para Devs da FIAP, turma 11IADT, com foco em **Análise Exploratória de Dados (EDA)**, **Machine Learning** e entrega de uma solução completa para predição de câncer de mama.
+Projeto desenvolvido como parte do **Tech Challenge** da Pós-Graduação em IA para Devs da FIAP, turma 11IADT, com foco no **Problema de Roteamento de Veículos (VRP)** utilizando **Algoritmos Genéticos (AG)** e **Large Language Models (LLMs)** para geração automatizada de instruções operacionais, relatórios de eficiência e suporte em linguagem natural.
 
-O projeto utiliza o dataset **Wisconsin Diagnostic Breast Cancer (WDBC)** para explorar, preparar e modelar dados relacionados à classificação de tumores como **benignos** ou **malignos**. A solução inclui notebook de análise, modelos treinados, uma API em **FastAPI** e um cliente em **Swift / SwiftUI**.
+O projeto estende o código base do problema do Caixeiro Viajante (TSP) para uma frota heterogênea de veículos com restrições operacionais complexas do setor hospitalar (capacidade de carga, autonomia de turno, jornada de trabalho, cadeia de frio e janelas de prioridade). Além disso, integra uma LLM (**Google Gemini** / templates determinísticos offline) para gerar instruções aos motoristas, relatórios gerenciais e responder a dúvidas sobre as rotas.
 
-O video explicativo pode ser visto em: https://www.youtube.com/watch?v=3r7pjXJOXdo
+O vídeo explicativo da Fase 2 pode ser visto em: https://www.youtube.com/watch?v=
 
-> ⚠️ **Aviso académico:** este projeto tem finalidade educacional e experimental. Os modelos desenvolvidos não substituem diagnóstico médico profissional.
+> ⚠️ **Aviso acadêmico:** este projeto tem finalidade educacional e experimental. As rotas, frotas e pedidos foram sintetizados para fins de modelagem e validação das técnicas.
 
 ---
 
 ## 🎯 Objetivo
 
-O objetivo do projeto é desenvolver e comparar modelos de Machine Learning capazes de classificar amostras em duas categorias:
+O objetivo principal é solucionar os desafios logísticos de um Centro de Distribuição (CD) hospitalar em São Paulo, otimizando a distribuição de medicamentos e insumos entre unidades de saúde (hospitais, UBS, AMA) e pacientes em atendimento domiciliar.
 
-- **B — Benigno**
-- **M — Maligno**
+As metas técnicas incluem:
 
-As etapas principais incluem:
-
-- exploração dos dados;
-- análise da qualidade dos dados;
-- tratamento e limpeza;
-- engenharia de atributos;
-- pré-processamento;
-- treinamento dos modelos;
-- avaliação das métricas;
-- comparação dos resultados;
-- análise da matriz de confusão;
-- experimentação com redução de dimensionalidade usando PCA.
+- **Evolução do TSP para VRP:** adaptar a representação cromossômica e os operadores genéticos para suportar múltiplos veículos;
+- **Modelagem de Restrições Reais:** incorporar penalidades e critérios operacionais na função de *fitness*;
+- **Cadeia de Frio e Prioridades:** garantir atendimento prioritário para entregas críticas (até 09:00) e alocação estrita de itens refrigerados (2 °C a 8 °C) em veículos com refrigeração;
+- **Benchmarking de Algoritmos:** comparar configurações do AG com heurísticas clássicas (Vizinho Mais Próximo, Despacho por Prioridade e VMP + 2-opt);
+- **Visualização Geoespacial:** mapear rotas de forma estática e interativa com **Folium**;
+- **Integração com LLM:** utilizar **Google Gemini** para traduzir os dados da operação em instruções para os motoristas, relatórios executivos diários/semanais e assistência conversacional fundamentada (*grounded*).
 
 ---
 
-## 📊 Dataset
+## 📊 Datasets e Cenário Operacional
 
-O projeto utiliza o dataset **Wisconsin Diagnostic Breast Cancer (WDBC)**.
+O cenário modela a rede de saúde em torno do Centro de Distribuição (Barra Funda / SP), compreendendo 42 locais, 3 veículos e 476 linhas de pedidos ao longo de uma semana (19 a 23/10/2026), consolidados em 112 entregas.
 
-Arquivo utilizado:
+Os arquivos estão localizados na pasta `data/`:
 
-```text
-data/breast-cancer-wisconsin-data.csv
-```
+| Arquivo | Descrição |
+|---|---|
+| `data/delivery_locations.csv` | Cadastro do CD, 7 hospitais, 16 UBS, 4 AMA e 14 pacientes domiciliares (coordenadas e tempos de atendimento). |
+| `data/delivery_fleet.csv` | Frota com 3 veículos: `VAN-REF-01` (refrigerada, 800 kg), `VAN-SEC-02` (seca, 800 kg) e `UTIL-REF-03` (utilitário refrigerado, 350 kg). |
+| `data/delivery_orders.csv` | Histórico semanal de pedidos com item, categoria, quantidade, peso total, prioridade e exigência de refrigeração. |
 
-Fonte: [https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data/data](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data/data)
-
-Durante o pré-processamento, colunas como `id` e `Unnamed: 32` são removidas. A variável `diagnosis` é convertida para representação binária:
-
-```text
-B → 0
-M → 1
-```
+As distâncias entre locais são calculadas utilizando a fórmula de **Haversine** com fator de tortuosidade urbana ($1{,}3\times$), assumindo velocidade média operacional de 24 km/h.
 
 ---
 
-## 🔎 Análise Exploratória
+## 🧬 Modelagem do Algoritmo Genético
 
-A análise contempla:
+### 1. Representação do Cromossomo
+Para estender o TSP ao VRP multiveículo, o cromossomo é modelado como uma permutação das entregas do dia com genes separadores (delimitadores de veículos). Dessa forma, a ordem dos genes define simultaneamente a atribuição do veículo e a sequência de paradas.
 
-- dimensões do dataset;
-- tipos das variáveis;
-- estatísticas descritivas;
-- valores ausentes;
-- registros duplicados;
-- distribuição das classes;
-- análise das variáveis numéricas;
-- visualizações e correlações.
+### 2. Função Fitness e Penalidades
+A função de aptidão (*fitness*) minimiza o custo total ponderado, somando:
+- **Distância total percorrida (km);**
+- **Custo suave de espera:** priorização temporal de entregas críticas e de alta prioridade;
+- **Penalidades por atraso:** multas severas caso entregas críticas ultrapassem 09:00 ou de alta prioridade ultrapassem 12:00;
+- **Penalidades por violação de restrições rígidas:**
+  - Excesso de capacidade de carga do veículo (kg);
+  - Excesso de autonomia máxima por turno (km);
+  - Excesso do limite de jornada de trabalho (8 horas / 480 minutos);
+  - Quebra da cadeia de frio (alocação de item refrigerado em veículo de carga seca).
 
-A divisão dos dados foi feita com:
-
-```python
-train_test_split(
-    X,
-    y,
-    test_size=0.2,
-    random_state=42,
-    stratify=y
-)
-```
-
-Assim, 80% dos dados são usados para treino e 20% para teste, preservando a proporção das classes.
+### 3. Operadores Genéticos
+- **Seleção:** Roleta e Seleção por Torneio ($k=3$ ou $k=5$);
+- **Crossover:** *Order Crossover* (OX) adaptado para cromossomos com separadores;
+- **Mutações:** Troca (*Swap*), Inversão (*Inversion*) e Inserção (*Insertion*) intra e inter-rotas;
+- **Elitismo:** preservação das melhores soluções entre gerações;
+- **Semeadura Heurística:** inicialização opcional com soluções do Vizinho Mais Próximo.
 
 ---
 
-## 🧹 Pré-processamento
+## 🔬 Experimentos e Resultados
 
-As principais etapas de preparação dos dados são:
+Foram executados experimentos comparando 4 configurações de Algoritmo Genético ao longo de 600 gerações com 5 sementes (*seeds*) cada:
 
-1. remoção de colunas desnecessárias;
-2. codificação da variável alvo;
-3. separação entre `X` e `y`;
-4. divisão entre treino e teste;
-5. padronização das features;
-6. experimentação com diferentes estratégias de escalonamento.
+- **E1 (Código base adaptado):** População 100, Roleta, mutação por troca adjacente;
+- **E2 (Operadores melhorados):** População 150, Torneio ($k=3$), mutação mista;
+- **E3 (Melhor configuração):** População 300, Torneio ($k=5$), mutação mista com taxa 0.6;
+- **E4 (Com semeadura heurística):** População 200 com inicialização híbrida.
 
-A solução compara principalmente:
+### Comparativo do Dia Detalhado (19/10/2026 — 24 entregas)
 
-- `StandardScaler`
-- `RobustScaler`
-- `PCA` após escalonamento
+| Abordagem / Configuração | Distância (km) | Duração Total (h) | Críticas no Prazo | Soluções Viáveis | Custo Médio |
+|---|---:|---:|---:|---:|---:|
+| **TSP (Código Base)** | 156,5 km | 12,5 h | 16,7% (1/6) | Inviável | — |
+| **Vizinho Mais Próximo (VMP)** | 229,5 km | 16,1 h | 50,0% (3/6) | Viável | 573,8 |
+| **VMP + 2-opt** | 191,1 km | 14,5 h | 16,7% (1/6) | Viável | 485,2 |
+| **AG — Configuração E1** | 184,2 km | 13,8 h | 83,3% | 3 / 5 | 426,6 |
+| **AG — Configuração E3 (Melhor)** | **168,1 km** | **13,0 h** | **100,0% (6/6)** | **5 / 5** | **319,8** |
 
----
-
-## 🤖 Modelos Avaliados
-
-Foram avaliados três algoritmos de classificação:
-
-### Logistic Regression
-Modelo de classificação linear utilizado como baseline.
-
-### K-Nearest Neighbors (KNN)
-Algoritmo baseado na proximidade entre as observações.
-
-### Random Forest
-Modelo baseado em um conjunto de árvores de decisão.
-
-Os modelos são implementados com `scikit-learn`.
+### Destaques da Simulação Semanal
+- **Economia de distância:** redução de **167,4 km (17,0%)** em relação ao Vizinho Mais Próximo;
+- **Tempo poupado:** **7,0 horas** a menos de trânsito para a frota;
+- **Pontualidade máxima:** **100% das entregas críticas entregues no prazo** em todos os dias da semana;
+- **Economia financeira estimada:** **R$ 889,22** na semana.
 
 ---
 
-## 📏 Métricas
+## 🤖 Integração com LLM (Google Gemini & Modo Offline)
 
-Os modelos foram avaliados por:
+A solução integra processamento de linguagem natural utilizando o modelo `gemini-3.8-flash` (via `google-generativeai`) com as seguintes diretrizes:
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- ROC-AUC
-- Matriz de Confusão
-- Classification Report
+- **Ancoragem estrita de contexto (*Groundedness*):** Os dados calculados pelo AG são injetados em formato JSON estruturado (`<dados_operacao>`), proibindo alucinações de horários ou paradas;
+- **Instruções para motoristas:** geração de rotas passo a passo com orientações de manuseio térmico (2 °C a 8 °C) e conferência de medicamentos controlados;
+- **Relatórios executivos:** sínteses diárias e semanais com indicadores de ocupação, custos e gargalos da frota;
+- **Assistente interativo (Q&A):** respostas a dúvidas com histórico de conversa e validação automatizada de saídas;
+- **Modo Offline:** fallback automático para templates determinísticos caso a chave de API não esteja configurada.
 
 ---
 
-## 📈 Resultados
+## 🗺️ Visualização de Rotas
 
-Os resultados do notebook indicam desempenho muito alto para os modelos avaliados, com destaque para o **Random Forest sem PCA**.
-
-| Métrica | Resultado |
-|---|---:|
-| Accuracy | 97,37% |
-| Precision | 100,00% |
-| Recall | 92,86% |
-| F1 Score | 96,30% |
-| ROC-AUC | 99,29% |
-
-Matriz de confusão do modelo principal:
-
-|  | Predito B | Predito M |
-|---|---:|---:|
-| **Real B** | 72 | 0 |
-| **Real M** | 3 | 39 |
-
-Isso corresponde a:
-
-- **TP:** 39
-- **TN:** 72
-- **FP:** 0
-- **FN:** 3
+O projeto gera visualizações completas:
+- **Gráficos estatísticos:** curvas de convergência, boxplots de peso e barras de ocupação da frota com Seaborn e Matplotlib;
+- **Mapa Interativo (Folium):** exportado em `fase2_mapa_rotas.html`, apresentando trajetos coloridos por veículo, numeração sequencial de paradas e marcadores diferenciados para hospitais, UBS, AMA e residências.
 
 ---
 
 ## 🛠️ Tecnologias
 
-O projeto foi desenvolvido em **Python** e inclui:
-
-- [NumPy](https://numpy.org/)
-- [Pandas](https://pandas.pydata.org/)
-- [Matplotlib](https://matplotlib.org/)
-- [Seaborn](https://seaborn.pydata.org/)
-- [Scikit-learn](https://scikit-learn.org/)
-- [FastAPI](https://fastapi.tiangolo.com/)
-- [Uvicorn](https://www.uvicorn.org/)
-- [Swift / SwiftUI](https://developer.apple.com/xcode/swiftui/)
+- [Python 3.10+](https://www.python.org/)
+- [Pandas](https://pandas.pydata.org/) & [NumPy](https://numpy.org/) — manipulação e análise de dados
+- [Matplotlib](https://matplotlib.org/) & [Seaborn](https://seaborn.pydata.org/) — gráficos estáticos e análise exploratória
+- [Folium](https://python-visualization.github.io/folium/) — mapas interativos geoespaciais
+- [Google Generative AI (Gemini)](https://ai.google.dev/) — integração com LLM
+- [Jupyter Notebook](https://jupyter.org/) / [Google Colab](https://colab.research.google.com/) — ambiente de execução e experimentação
 
 ---
 
 ## 📁 Estrutura do Projeto
 
 ```text
-tech-challenge-11iadt-fase-01/
+tech-challenge-11iadt/
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
-├── app/
-│   └── diagnostic/
-│       └── diagnostic.xcodeproj/
+├── Doc_Tech_Challenge_Fase_2.pdf
 ├── data/
-│   └── breast-cancer-wisconsin-data.csv
-├── models/                       # modelos treinados (.pkl)
-├── notebooks/
-│   └── tech_challenge_fase1.ipynb
-├── src/
-│   ├── __init__.py
-│   ├── data_prep.py
-│   ├── main.py                   # API FastAPI
-│   └── model.py
-├── tests/
-│   └── test_main.py
-└── .venv/                       # ambiente virtual local (opcional)
+│   ├── delivery_fleet.csv         # Especificações da frota de veículos
+│   ├── delivery_locations.csv     # Coordenadas e tempos de atendimento dos locais
+│   └── delivery_orders.csv        # Pedidos semanais de medicamentos e insumos
+└── notebooks/
+    └── tech_challenge_fase2.ipynb # Notebook com implementação completa do AG e LLM
 ```
 
 ---
 
-## 🧰 Como configurar o ambiente
+## 🚀 Como Executar o Projeto
 
-### 1. Pré-requisitos
+Você pode executar o projeto de duas formas: no **Google Colab** (recomendado para uso imediato) ou em seu **ambiente local**.
 
+### Opção 1: Execução no Google Colab (Recomendada)
+
+1. Acesse o [Google Colab](https://colab.research.google.com/).
+2. Faça o upload do arquivo `notebooks/tech_challenge_fase2.ipynb`.
+3. Na barra lateral esquerda do Colab, clique no ícone de pasta (📁 **Arquivos**) e faça o upload dos 3 arquivos CSV da pasta `data/`:
+   - `delivery_locations.csv`
+   - `delivery_fleet.csv`
+   - `delivery_orders.csv`
+4. *(Opcional)* Para habilitar as respostas dinâmicas com o **Google Gemini**:
+   - Clique no ícone de chave (🔑 **Secrets**) na barra lateral esquerda;
+   - Adicione o segredo com o nome `GOOGLE_API_KEY` e o valor da sua chave obtida no [Google AI Studio](https://aistudio.google.com/);
+   - Ative a opção de acesso ao notebook.
+   > **Nota:** Se a chave não for configurada, o notebook executará normalmente no **modo offline**, utilizando os templates determinísticos para todas as saídas de texto.
+5. Execute as células sequencialmente (`Ambiente de execução` → `Executar tudo`).
+
+---
+
+### Opção 2: Execução no Ambiente Local
+
+#### 1. Pré-requisitos
 - Python 3.10 ou superior
-- `pip` instalado
-- Git
-- Opcional: Xcode 14+ para executar o app SwiftUI
+- `pip` e `git` instalados
 
-### 2. Clone o repositório
+#### 2. Clonar o repositório
 
 ```bash
-git clone https://github.com/NicoBondarenco/tech-challenge-11iadt-fase-01.git
-cd tech-challenge-11iadt-fase-01
+git clone https://github.com/NicoBondarenco/tech-challenge-11iadt.git
+cd tech-challenge-11iadt
 ```
 
-### 3. Crie e ative um ambiente virtual
+#### 3. Criar e ativar o ambiente virtual
 
 No macOS/Linux:
 
@@ -242,134 +200,55 @@ python -m venv .venv
 .venv\Scripts\activate.bat
 ```
 
-### 4. Instale as dependências
+#### 4. Instalar as dependências
 
 ```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
----
+#### 5. Configurar a chave de API (Opcional)
 
-## 🚀 Executando a API FastAPI
-
-A API está localizada em `src/main.py` e utiliza modelos salvos na pasta `models/`.
-
-### Opção 1: FastAPI em modo de desenvolvimento
+No macOS/Linux:
 
 ```bash
-fastapi dev src/main.py
+export GOOGLE_API_KEY="sua_chave_aqui"
 ```
 
-### Opção 2: Uvicorn
+No Windows (PowerShell):
+
+```powershell
+$env:GOOGLE_API_KEY="sua_chave_aqui"
+```
+
+No Windows (CMD):
+
+```cmd
+set GOOGLE_API_KEY=sua_chave_aqui
+```
+
+#### 6. Iniciar o Jupyter e executar o notebook
 
 ```bash
-uvicorn src.main:app --reload --port 8000
+jupyter notebook notebooks/tech_challenge_fase2.ipynb
 ```
 
-A aplicação ficará disponível em:
-
-- http://127.0.0.1:8000
-
-### Documentação interativa
-
-- Swagger UI: http://127.0.0.1:8000/docs
-- ReDoc: http://127.0.0.1:8000/redoc
-
----
-
-## 🔍 Endpoints principais
-
-- `GET /` — mensagem de boas-vindas
-- `GET /models` — lista os modelos disponíveis
-- `GET /predict` — predição genérica, com `model_name` e as 30 features do dataset
-- `GET /predict/{model_name}` — rota específica por modelo
-
-Exemplos de modelos disponíveis:
-
-- `random_forest`
-- `random_forest_pca`
-- `knn`
-- `knn_pca`
-- `logistic_regression`
-- `logistic_regression_pca`
-
-### Exemplo de chamada via curl
+Ou via JupyterLab:
 
 ```bash
-curl -X 'GET' \
-  'http://127.0.0.1:8000/predict/random_forest?radius_mean=14.22&texture_mean=23.12&perimeter_mean=92.87&area_mean=620.5&smoothness_mean=0.1039&compactness_mean=0.1101&concavity_mean=0.07215&concave%20points_mean=0.04879&symmetry_mean=0.1794&fractal_dimension_mean=0.05964&radius_se=0.3456&texture_se=1.234&perimeter_se=2.456&area_se=28.5&smoothness_se=0.0065&compactness_se=0.025&concavity_se=0.035&concave%20points_se=0.012&symmetry_se=0.018&fractal_dimension_se=0.0035&radius_worst=15.89&texture_worst=30.45&perimeter_worst=105.2&area_worst=780.1&smoothness_worst=0.141&compactness_worst=0.28&concavity_worst=0.25&concave%20points_worst=0.11&symmetry_worst=0.31&fractal_dimension_worst=0.089' \
-  -H 'accept: application/json'
+jupyter lab
 ```
+
+Abra o notebook `notebooks/tech_challenge_fase2.ipynb` e execute as células sequencialmente.
 
 ---
 
-## 🧪 Executando os testes
+## ⚠️ Limitações e Próximos Passos
 
-Para rodar a suíte de testes automatizados do projeto:
-
-```bash
-pytest
-```
-
----
-
-## 📓 Notebook
-
-O notebook principal está em:
-
-```text
-notebooks/tech_challenge_fase1.ipynb
-```
-
-Ele reúne o processo completo de análise exploratória, processamento, treino, comparação de modelos e avaliação das métricas.
-
----
-
-## 📱 Aplicativo SwiftUI (`diagnostic`)
-
-O projeto também inclui um cliente em SwiftUI em:
-
-```text
-app/diagnostic/
-```
-
-### Como rodar o app
-
-1. Abra o arquivo `app/diagnostic/diagnostic.xcodeproj` no Xcode.
-2. Verifique se a `baseURL` em `NetworkManager.swift` aponta para a API correta (normalmente `http://127.0.0.1:8000`).
-3. Execute o projeto no simulador ou em um dispositivo.
-
----
-
-## ⚠️ Limitações e observações
-
-- Os resultados refletem o dataset e a metodologia utilizada neste projeto.
-- O objetivo é acadêmico e experimental.
-- Os modelos não devem ser usados como diagnóstico clínico real.
-- O app cliente depende da API estar em execução localmente para funcionar corretamente.
-
----
-
-## 🖥️ Executando o Streamlit
-
-A aplicação visual está localizada em `src/app.py` e utiliza o modelo treinado em `models/`.
-
-Com o ambiente virtual ativado e as dependências instaladas, execute:
-
-```bash
-python -m streamlit run src/app.py
-```
-
-A aplicação ficará disponível em:
-
-- http://localhost:8501
-
-O arquivo do modelo esperado é:
-
-```text
-models/mobilenetv2_cbis_ddsm_best.keras
-```
+- **Estimativa de Distâncias:** as distâncias são calculadas via Haversine com fator de tortuosidade ($1{,}3\times$). Uma evolução futura é integrar matrizes de distância reais via API (OSRM ou Google Routes).
+- **Trânsito e Velocidade:** assume-se velocidade média constante (24 km/h); variações dinâmicas de tráfego por horário podem ser incorporadas em fases posteriores.
+- **Viagem Única:** cada veículo realiza uma única jornada por turno.
+- **Integração de Sistemas:** como próximos passos, o otimizador e o assistente de linguagem natural podem ser expostos via endpoints de uma API FastAPI.
 
 ---
 
@@ -383,20 +262,15 @@ models/mobilenetv2_cbis_ddsm_best.keras
 
 ---
 
-## ✅ Resumo rápido de execução
+## ✅ Resumo Rápido de Execução
 
 ```bash
-git clone https://github.com/NicoBondarenco/tech-challenge-11iadt-fase-01.git
-cd tech-challenge-11iadt-fase-01
+git clone https://github.com/NicoBondarenco/tech-challenge-11iadt.git
+cd tech-challenge-11iadt
 python -m venv .venv
 source .venv/bin/activate  # ou .\.venv\Scripts\Activate.ps1 no Windows
 pip install -r requirements.txt
-fastapi dev src/main.py
+jupyter notebook notebooks/tech_challenge_fase2.ipynb
 ```
-
-Em seguida, acesse:
-
-- http://127.0.0.1:8000/docs
-- http://127.0.0.1:8000/redoc
 
 

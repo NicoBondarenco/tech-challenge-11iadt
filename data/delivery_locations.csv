@@ -1,0 +1,43 @@
+location_id,name,type,neighborhood,zone,latitude,longitude,service_time_min
+CD,Centro de Distribuição - Hospital Universitário,Centro de Distribuição,Barra Funda,Oeste,-23.523,-46.67,0
+H01,Hospital Universitário - Unidade Central,Hospital,Cerqueira César,Oeste,-23.5573,-46.6699,20
+H02,Hospital Dia Mooca,Hospital,Mooca,Leste,-23.5594,-46.5986,20
+H03,Pronto-Socorro Santana,Hospital,Santana,Norte,-23.5005,-46.6253,20
+H04,Hospital Regional Santo Amaro,Hospital,Santo Amaro,Sul,-23.6525,-46.7083,20
+H05,Maternidade Tatuapé,Hospital,Tatuapé,Leste,-23.5405,-46.576,20
+H06,Hospital Dia Lapa,Hospital,Lapa,Oeste,-23.5234,-46.7031,20
+H07,Centro Oncológico Vila Mariana,Hospital,Vila Mariana,Sul,-23.5885,-46.6345,20
+U01,UBS Pinheiros,UBS,Pinheiros,Oeste,-23.5663,-46.6927,12
+U02,UBS Vila Madalena,UBS,Vila Madalena,Oeste,-23.553,-46.69,12
+U03,UBS Perdizes,UBS,Perdizes,Oeste,-23.5367,-46.6779,12
+U04,UBS Butantã,UBS,Butantã,Oeste,-23.5718,-46.7082,12
+U05,UBS Jabaquara,UBS,Jabaquara,Sul,-23.6462,-46.641,12
+U06,UBS Saúde,UBS,Saúde,Sul,-23.6183,-46.6391,12
+U07,UBS Ipiranga,UBS,Ipiranga,Sul,-23.5893,-46.6067,12
+U08,UBS Vila Prudente,UBS,Vila Prudente,Leste,-23.5833,-46.5807,12
+U09,UBS Penha,UBS,Penha,Leste,-23.5255,-46.5432,12
+U10,UBS Vila Maria,UBS,Vila Maria,Norte,-23.5135,-46.5807,12
+U11,UBS Casa Verde,UBS,Casa Verde,Norte,-23.5108,-46.6562,12
+U12,UBS Freguesia do Ó,UBS,Freguesia do Ó,Norte,-23.4993,-46.6966,12
+U13,UBS Pirituba,UBS,Pirituba,Norte,-23.4874,-46.7262,12
+U14,UBS Tucuruvi,UBS,Tucuruvi,Norte,-23.4801,-46.6036,12
+U15,UBS Campo Belo,UBS,Campo Belo,Sul,-23.6229,-46.6688,12
+U16,UBS Morumbi,UBS,Morumbi,Oeste,-23.5966,-46.7203,12
+A01,AMA Bela Vista,AMA,Bela Vista,Centro,-23.5583,-46.6446,12
+A02,AMA Sacomã,AMA,Sacomã,Sul,-23.6012,-46.6035,12
+A03,AMA Carrão,AMA,Carrão,Leste,-23.545,-46.54,12
+A04,AMA Jaçanã,AMA,Jaçanã,Norte,-23.4637,-46.5797,12
+D01,Paciente domiciliar 01,Domiciliar,Moema,Sul,-23.6012,-46.6633,15
+D02,Paciente domiciliar 02,Domiciliar,Vila Mariana,Sul,-23.5925,-46.642,15
+D03,Paciente domiciliar 03,Domiciliar,Aclimação,Centro,-23.5745,-46.629,15
+D04,Paciente domiciliar 04,Domiciliar,Higienópolis,Centro,-23.5441,-46.6562,15
+D05,Paciente domiciliar 05,Domiciliar,Lapa,Oeste,-23.5285,-46.712,15
+D06,Paciente domiciliar 06,Domiciliar,Vila Leopoldina,Oeste,-23.5275,-46.73,15
+D07,Paciente domiciliar 07,Domiciliar,Santana,Norte,-23.495,-46.63,15
+D08,Paciente domiciliar 08,Domiciliar,Vila Guilherme,Norte,-23.511,-46.604,15
+D09,Paciente domiciliar 09,Domiciliar,Tatuapé,Leste,-23.536,-46.568,15
+D10,Paciente domiciliar 10,Domiciliar,Vila Formosa,Leste,-23.566,-46.544,15
+D11,Paciente domiciliar 11,Domiciliar,Campo Limpo,Sul,-23.644,-46.759,15
+D12,Paciente domiciliar 12,Domiciliar,Cambuci,Centro,-23.5665,-46.6205,15
+D13,Paciente domiciliar 13,Domiciliar,Brooklin,Sul,-23.614,-46.687,15
+D14,Paciente domiciliar 14,Domiciliar,Ipiranga,Sul,-23.587,-46.615,15

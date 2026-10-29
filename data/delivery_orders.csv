@@ -1,0 +1,477 @@
+order_id,date,weekday,location_id,item,category,priority,refrigerated,controlled,quantity,unit_weight_kg,weight_kg
+PED-20261019-001,2026-10-19,segunda-feira,H01,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,2,2.0,4.0
+PED-20261019-002,2026-10-19,segunda-feira,H01,Opioide injetável (controlado),Medicamento controlado,alta,False,True,3,0.8,2.4
+PED-20261019-003,2026-10-19,segunda-feira,H01,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,2,12.0,24.0
+PED-20261019-004,2026-10-19,segunda-feira,H01,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,6,13.0,78.0
+PED-20261019-005,2026-10-19,segunda-feira,H01,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261019-006,2026-10-19,segunda-feira,H01,Gaze e ataduras (fardo),Insumo,regular,False,False,6,6.0,36.0
+PED-20261019-007,2026-10-19,segunda-feira,H01,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,7,3.0,21.0
+PED-20261019-008,2026-10-19,segunda-feira,H01,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,2,11.0,22.0
+PED-20261019-009,2026-10-19,segunda-feira,H02,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,7,2.0,14.0
+PED-20261019-010,2026-10-19,segunda-feira,H02,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,5,13.0,65.0
+PED-20261019-011,2026-10-19,segunda-feira,H02,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261019-012,2026-10-19,segunda-feira,H02,Gaze e ataduras (fardo),Insumo,regular,False,False,6,6.0,36.0
+PED-20261019-013,2026-10-19,segunda-feira,H02,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,7,3.0,21.0
+PED-20261019-014,2026-10-19,segunda-feira,H03,Opioide injetável (controlado),Medicamento controlado,alta,False,True,1,0.8,0.8
+PED-20261019-015,2026-10-19,segunda-feira,H03,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,2,12.0,24.0
+PED-20261019-016,2026-10-19,segunda-feira,H03,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261019-017,2026-10-19,segunda-feira,H03,Seringas e agulhas (caixa),Insumo,regular,False,False,6,4.0,24.0
+PED-20261019-018,2026-10-19,segunda-feira,H03,Gaze e ataduras (fardo),Insumo,regular,False,False,5,6.0,30.0
+PED-20261019-019,2026-10-19,segunda-feira,H04,Opioide injetável (controlado),Medicamento controlado,alta,False,True,2,0.8,1.6
+PED-20261019-020,2026-10-19,segunda-feira,H04,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,5,12.0,60.0
+PED-20261019-021,2026-10-19,segunda-feira,H04,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,5,13.0,65.0
+PED-20261019-022,2026-10-19,segunda-feira,H04,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,9,5.0,45.0
+PED-20261019-023,2026-10-19,segunda-feira,H04,Seringas e agulhas (caixa),Insumo,regular,False,False,7,4.0,28.0
+PED-20261019-024,2026-10-19,segunda-feira,H04,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,1,11.0,11.0
+PED-20261019-025,2026-10-19,segunda-feira,H05,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,5,12.0,60.0
+PED-20261019-026,2026-10-19,segunda-feira,H05,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,2,2.5,5.0
+PED-20261019-027,2026-10-19,segunda-feira,H05,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,6,13.0,78.0
+PED-20261019-028,2026-10-19,segunda-feira,H05,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,5,5.0,25.0
+PED-20261019-029,2026-10-19,segunda-feira,H05,Seringas e agulhas (caixa),Insumo,regular,False,False,5,4.0,20.0
+PED-20261019-030,2026-10-19,segunda-feira,H05,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,1,11.0,11.0
+PED-20261019-031,2026-10-19,segunda-feira,H06,Opioide injetável (controlado),Medicamento controlado,alta,False,True,1,0.8,0.8
+PED-20261019-032,2026-10-19,segunda-feira,H06,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261019-033,2026-10-19,segunda-feira,H06,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,9,5.0,45.0
+PED-20261019-034,2026-10-19,segunda-feira,H06,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261019-035,2026-10-19,segunda-feira,H06,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,6,3.0,18.0
+PED-20261019-036,2026-10-19,segunda-feira,H06,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,1,11.0,11.0
+PED-20261019-037,2026-10-19,segunda-feira,H07,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,3,12.0,36.0
+PED-20261019-038,2026-10-19,segunda-feira,H07,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,7,5.0,35.0
+PED-20261019-039,2026-10-19,segunda-feira,H07,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261019-040,2026-10-19,segunda-feira,H07,Quimioterápico injetável (kit refrigerado),Medicamento crítico,critica,True,True,6,1.5,9.0
+PED-20261019-041,2026-10-19,segunda-feira,U01,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,2,5.0,10.0
+PED-20261019-042,2026-10-19,segunda-feira,U02,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,8,1.0,8.0
+PED-20261019-043,2026-10-19,segunda-feira,U02,Kit curativo especial,Insumo,regular,False,False,3,1.5,4.5
+PED-20261019-044,2026-10-19,segunda-feira,U02,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,1,5.0,5.0
+PED-20261019-045,2026-10-19,segunda-feira,U02,Seringas e agulhas (caixa),Insumo,regular,False,False,1,4.0,4.0
+PED-20261019-046,2026-10-19,segunda-feira,U05,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,5,2.5,12.5
+PED-20261019-047,2026-10-19,segunda-feira,U05,Kit curativo especial,Insumo,regular,False,False,3,1.5,4.5
+PED-20261019-048,2026-10-19,segunda-feira,U05,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,2,5.0,10.0
+PED-20261019-049,2026-10-19,segunda-feira,U05,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261019-050,2026-10-19,segunda-feira,U06,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,7,1.2,8.4
+PED-20261019-051,2026-10-19,segunda-feira,U06,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,3,1.0,3.0
+PED-20261019-052,2026-10-19,segunda-feira,U06,Kit curativo especial,Insumo,regular,False,False,2,1.5,3.0
+PED-20261019-053,2026-10-19,segunda-feira,U06,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,1,5.0,5.0
+PED-20261019-054,2026-10-19,segunda-feira,U06,Seringas e agulhas (caixa),Insumo,regular,False,False,1,4.0,4.0
+PED-20261019-055,2026-10-19,segunda-feira,U06,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,1,3.0,3.0
+PED-20261019-056,2026-10-19,segunda-feira,U09,Vacinas (caixa térmica),Imunobiológico,alta,True,False,1,4.0,4.0
+PED-20261019-057,2026-10-19,segunda-feira,U09,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,5,1.2,6.0
+PED-20261019-058,2026-10-19,segunda-feira,U09,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,5,1.0,5.0
+PED-20261019-059,2026-10-19,segunda-feira,U09,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,5,5.0,25.0
+PED-20261019-060,2026-10-19,segunda-feira,U09,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261019-061,2026-10-19,segunda-feira,U10,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,7,1.2,8.4
+PED-20261019-062,2026-10-19,segunda-feira,U10,Kit curativo especial,Insumo,regular,False,False,6,1.5,9.0
+PED-20261019-063,2026-10-19,segunda-feira,U10,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,2,5.0,10.0
+PED-20261019-064,2026-10-19,segunda-feira,U10,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261019-065,2026-10-19,segunda-feira,U10,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,1,3.0,3.0
+PED-20261019-066,2026-10-19,segunda-feira,U11,Vacinas (caixa térmica),Imunobiológico,alta,True,False,1,4.0,4.0
+PED-20261019-067,2026-10-19,segunda-feira,U11,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,6,1.2,7.2
+PED-20261019-068,2026-10-19,segunda-feira,U11,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,5,5.0,25.0
+PED-20261019-069,2026-10-19,segunda-feira,U12,Vacinas (caixa térmica),Imunobiológico,alta,True,False,3,4.0,12.0
+PED-20261019-070,2026-10-19,segunda-feira,U12,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,12,1.2,14.4
+PED-20261019-071,2026-10-19,segunda-feira,U12,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,6,1.0,6.0
+PED-20261019-072,2026-10-19,segunda-feira,U12,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,2,5.0,10.0
+PED-20261019-073,2026-10-19,segunda-feira,U13,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,5,1.2,6.0
+PED-20261019-074,2026-10-19,segunda-feira,U13,Kit curativo especial,Insumo,regular,False,False,3,1.5,4.5
+PED-20261019-075,2026-10-19,segunda-feira,U13,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,1,5.0,5.0
+PED-20261019-076,2026-10-19,segunda-feira,U13,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261019-077,2026-10-19,segunda-feira,U14,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,9,1.0,9.0
+PED-20261019-078,2026-10-19,segunda-feira,U14,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261019-079,2026-10-19,segunda-feira,U14,Seringas e agulhas (caixa),Insumo,regular,False,False,1,4.0,4.0
+PED-20261019-080,2026-10-19,segunda-feira,U16,Vacinas (caixa térmica),Imunobiológico,alta,True,False,1,4.0,4.0
+PED-20261019-081,2026-10-19,segunda-feira,U16,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261019-082,2026-10-19,segunda-feira,U16,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,7,1.2,8.4
+PED-20261019-083,2026-10-19,segunda-feira,U16,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,8,1.0,8.0
+PED-20261019-084,2026-10-19,segunda-feira,U16,Seringas e agulhas (caixa),Insumo,regular,False,False,1,4.0,4.0
+PED-20261019-085,2026-10-19,segunda-feira,A04,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,2,2.0,4.0
+PED-20261019-086,2026-10-19,segunda-feira,A04,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261019-087,2026-10-19,segunda-feira,D01,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261019-088,2026-10-19,segunda-feira,D01,Fraldas geriátricas (fardo),Insumo,regular,False,False,3,7.0,21.0
+PED-20261019-089,2026-10-19,segunda-feira,D01,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261019-090,2026-10-19,segunda-feira,D02,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261019-091,2026-10-19,segunda-feira,D02,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261019-092,2026-10-19,segunda-feira,D03,Oxigênio medicinal (cilindro portátil),Medicamento crítico,critica,False,False,1,9.0,9.0
+PED-20261019-093,2026-10-19,segunda-feira,D03,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261019-094,2026-10-19,segunda-feira,D03,Kit curativo especial,Insumo,regular,False,False,1,1.5,1.5
+PED-20261019-095,2026-10-19,segunda-feira,D03,Fraldas geriátricas (fardo),Insumo,regular,False,False,3,7.0,21.0
+PED-20261019-096,2026-10-19,segunda-feira,D08,Oxigênio medicinal (cilindro portátil),Medicamento crítico,critica,False,False,1,9.0,9.0
+PED-20261019-097,2026-10-19,segunda-feira,D11,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261020-001,2026-10-20,terça-feira,H01,Opioide injetável (controlado),Medicamento controlado,alta,False,True,1,0.8,0.8
+PED-20261020-002,2026-10-20,terça-feira,H01,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261020-003,2026-10-20,terça-feira,H01,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,5,3.0,15.0
+PED-20261020-004,2026-10-20,terça-feira,H02,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,3,12.0,36.0
+PED-20261020-005,2026-10-20,terça-feira,H02,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,2,13.0,26.0
+PED-20261020-006,2026-10-20,terça-feira,H02,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261020-007,2026-10-20,terça-feira,H02,Seringas e agulhas (caixa),Insumo,regular,False,False,4,4.0,16.0
+PED-20261020-008,2026-10-20,terça-feira,H02,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261020-009,2026-10-20,terça-feira,H03,Opioide injetável (controlado),Medicamento controlado,alta,False,True,1,0.8,0.8
+PED-20261020-010,2026-10-20,terça-feira,H03,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,5,13.0,65.0
+PED-20261020-011,2026-10-20,terça-feira,H03,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261020-012,2026-10-20,terça-feira,H03,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261020-013,2026-10-20,terça-feira,H03,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,2,11.0,22.0
+PED-20261020-014,2026-10-20,terça-feira,H04,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261020-015,2026-10-20,terça-feira,H04,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261020-016,2026-10-20,terça-feira,H04,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,5,3.0,15.0
+PED-20261020-017,2026-10-20,terça-feira,H05,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,3,12.0,36.0
+PED-20261020-018,2026-10-20,terça-feira,H05,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,5,13.0,65.0
+PED-20261020-019,2026-10-20,terça-feira,H05,Seringas e agulhas (caixa),Insumo,regular,False,False,5,4.0,20.0
+PED-20261020-020,2026-10-20,terça-feira,H05,Gaze e ataduras (fardo),Insumo,regular,False,False,5,6.0,30.0
+PED-20261020-021,2026-10-20,terça-feira,H06,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261020-022,2026-10-20,terça-feira,H06,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,8,5.0,40.0
+PED-20261020-023,2026-10-20,terça-feira,H06,Seringas e agulhas (caixa),Insumo,regular,False,False,4,4.0,16.0
+PED-20261020-024,2026-10-20,terça-feira,H06,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261020-025,2026-10-20,terça-feira,H07,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,3,2.0,6.0
+PED-20261020-026,2026-10-20,terça-feira,H07,Opioide injetável (controlado),Medicamento controlado,alta,False,True,3,0.8,2.4
+PED-20261020-027,2026-10-20,terça-feira,H07,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,2,13.0,26.0
+PED-20261020-028,2026-10-20,terça-feira,H07,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261020-029,2026-10-20,terça-feira,H07,Gaze e ataduras (fardo),Insumo,regular,False,False,5,6.0,30.0
+PED-20261020-030,2026-10-20,terça-feira,H07,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,1,11.0,11.0
+PED-20261020-031,2026-10-20,terça-feira,H07,Quimioterápico injetável (kit refrigerado),Medicamento crítico,critica,True,True,3,1.5,4.5
+PED-20261020-032,2026-10-20,terça-feira,U03,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,10,1.2,12.0
+PED-20261020-033,2026-10-20,terça-feira,U03,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,9,1.0,9.0
+PED-20261020-034,2026-10-20,terça-feira,U03,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,4,5.0,20.0
+PED-20261020-035,2026-10-20,terça-feira,U03,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261020-036,2026-10-20,terça-feira,U05,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261020-037,2026-10-20,terça-feira,U05,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,3,2.5,7.5
+PED-20261020-038,2026-10-20,terça-feira,U05,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,8,1.2,9.6
+PED-20261020-039,2026-10-20,terça-feira,U05,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261020-040,2026-10-20,terça-feira,U05,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261020-041,2026-10-20,terça-feira,U05,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,1,3.0,3.0
+PED-20261020-042,2026-10-20,terça-feira,U06,Vacinas (caixa térmica),Imunobiológico,alta,True,False,3,4.0,12.0
+PED-20261020-043,2026-10-20,terça-feira,U06,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261020-044,2026-10-20,terça-feira,U06,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,9,1.2,10.8
+PED-20261020-045,2026-10-20,terça-feira,U06,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,10,1.0,10.0
+PED-20261020-046,2026-10-20,terça-feira,U06,Kit curativo especial,Insumo,regular,False,False,2,1.5,3.0
+PED-20261020-047,2026-10-20,terça-feira,U06,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261020-048,2026-10-20,terça-feira,U06,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261020-049,2026-10-20,terça-feira,U06,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,2,3.0,6.0
+PED-20261020-050,2026-10-20,terça-feira,U09,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,9,1.2,10.8
+PED-20261020-051,2026-10-20,terça-feira,U09,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,5,1.0,5.0
+PED-20261020-052,2026-10-20,terça-feira,U09,Kit curativo especial,Insumo,regular,False,False,5,1.5,7.5
+PED-20261020-053,2026-10-20,terça-feira,U09,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,2,5.0,10.0
+PED-20261020-054,2026-10-20,terça-feira,U09,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261020-055,2026-10-20,terça-feira,U09,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261020-056,2026-10-20,terça-feira,U10,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261020-057,2026-10-20,terça-feira,U10,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,8,1.2,9.6
+PED-20261020-058,2026-10-20,terça-feira,U10,Kit curativo especial,Insumo,regular,False,False,5,1.5,7.5
+PED-20261020-059,2026-10-20,terça-feira,U10,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261020-060,2026-10-20,terça-feira,U10,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261020-061,2026-10-20,terça-feira,U10,Gaze e ataduras (fardo),Insumo,regular,False,False,2,6.0,12.0
+PED-20261020-062,2026-10-20,terça-feira,U10,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,1,3.0,3.0
+PED-20261020-063,2026-10-20,terça-feira,U11,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261020-064,2026-10-20,terça-feira,U11,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,5,1.0,5.0
+PED-20261020-065,2026-10-20,terça-feira,U11,Kit curativo especial,Insumo,regular,False,False,3,1.5,4.5
+PED-20261020-066,2026-10-20,terça-feira,U11,Seringas e agulhas (caixa),Insumo,regular,False,False,1,4.0,4.0
+PED-20261020-067,2026-10-20,terça-feira,U11,Gaze e ataduras (fardo),Insumo,regular,False,False,2,6.0,12.0
+PED-20261020-068,2026-10-20,terça-feira,U11,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261020-069,2026-10-20,terça-feira,U12,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,7,1.2,8.4
+PED-20261020-070,2026-10-20,terça-feira,U12,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,4,1.0,4.0
+PED-20261020-071,2026-10-20,terça-feira,U12,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261020-072,2026-10-20,terça-feira,U13,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261020-073,2026-10-20,terça-feira,U13,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,4,1.0,4.0
+PED-20261020-074,2026-10-20,terça-feira,U13,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,1,5.0,5.0
+PED-20261020-075,2026-10-20,terça-feira,U13,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,2,3.0,6.0
+PED-20261020-076,2026-10-20,terça-feira,U14,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,4,2.5,10.0
+PED-20261020-077,2026-10-20,terça-feira,U14,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,5,1.2,6.0
+PED-20261020-078,2026-10-20,terça-feira,U14,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,9,1.0,9.0
+PED-20261020-079,2026-10-20,terça-feira,U14,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,2,5.0,10.0
+PED-20261020-080,2026-10-20,terça-feira,U14,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261020-081,2026-10-20,terça-feira,U14,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261020-082,2026-10-20,terça-feira,U16,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,10,1.2,12.0
+PED-20261020-083,2026-10-20,terça-feira,U16,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,6,1.0,6.0
+PED-20261020-084,2026-10-20,terça-feira,U16,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,4,5.0,20.0
+PED-20261020-085,2026-10-20,terça-feira,U16,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261020-086,2026-10-20,terça-feira,A02,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,2,2.0,4.0
+PED-20261020-087,2026-10-20,terça-feira,A02,Vacinas (caixa térmica),Imunobiológico,alta,True,False,1,4.0,4.0
+PED-20261020-088,2026-10-20,terça-feira,A02,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261020-089,2026-10-20,terça-feira,A02,Seringas e agulhas (caixa),Insumo,regular,False,False,1,4.0,4.0
+PED-20261020-090,2026-10-20,terça-feira,A03,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,2,13.0,26.0
+PED-20261020-091,2026-10-20,terça-feira,A03,Vacinas (caixa térmica),Imunobiológico,alta,True,False,1,4.0,4.0
+PED-20261020-092,2026-10-20,terça-feira,A03,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261020-093,2026-10-20,terça-feira,A03,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261020-094,2026-10-20,terça-feira,A03,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261020-095,2026-10-20,terça-feira,A04,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261020-096,2026-10-20,terça-feira,A04,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,2,5.0,10.0
+PED-20261020-097,2026-10-20,terça-feira,A04,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261020-098,2026-10-20,terça-feira,A04,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261020-099,2026-10-20,terça-feira,A04,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261020-100,2026-10-20,terça-feira,D03,Oxigênio medicinal (cilindro portátil),Medicamento crítico,critica,False,False,1,9.0,9.0
+PED-20261020-101,2026-10-20,terça-feira,D03,Fraldas geriátricas (fardo),Insumo,regular,False,False,1,7.0,7.0
+PED-20261020-102,2026-10-20,terça-feira,D03,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261020-103,2026-10-20,terça-feira,D04,Oxigênio medicinal (cilindro portátil),Medicamento crítico,critica,False,False,1,9.0,9.0
+PED-20261020-104,2026-10-20,terça-feira,D04,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261020-105,2026-10-20,terça-feira,D04,Kit curativo especial,Insumo,regular,False,False,1,1.5,1.5
+PED-20261020-106,2026-10-20,terça-feira,D08,Oxigênio medicinal (cilindro portátil),Medicamento crítico,critica,False,False,1,9.0,9.0
+PED-20261020-107,2026-10-20,terça-feira,D08,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261020-108,2026-10-20,terça-feira,D08,Kit curativo especial,Insumo,regular,False,False,1,1.5,1.5
+PED-20261020-109,2026-10-20,terça-feira,D09,Kit curativo especial,Insumo,regular,False,False,3,1.5,4.5
+PED-20261020-110,2026-10-20,terça-feira,D10,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,1,12.0,12.0
+PED-20261020-111,2026-10-20,terça-feira,D14,Oxigênio medicinal (cilindro portátil),Medicamento crítico,critica,False,False,2,9.0,18.0
+PED-20261020-112,2026-10-20,terça-feira,D14,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,2,12.0,24.0
+PED-20261020-113,2026-10-20,terça-feira,D14,Kit curativo especial,Insumo,regular,False,False,2,1.5,3.0
+PED-20261020-114,2026-10-20,terça-feira,D14,Fraldas geriátricas (fardo),Insumo,regular,False,False,1,7.0,7.0
+PED-20261020-115,2026-10-20,terça-feira,D14,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261021-001,2026-10-21,quarta-feira,H01,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,3,2.0,6.0
+PED-20261021-002,2026-10-21,quarta-feira,H01,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,3,12.0,36.0
+PED-20261021-003,2026-10-21,quarta-feira,H01,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261021-004,2026-10-21,quarta-feira,H01,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261021-005,2026-10-21,quarta-feira,H01,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261021-006,2026-10-21,quarta-feira,H01,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261021-007,2026-10-21,quarta-feira,H01,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,2,11.0,22.0
+PED-20261021-008,2026-10-21,quarta-feira,H01,Quimioterápico injetável (kit refrigerado),Medicamento crítico,critica,True,True,3,1.5,4.5
+PED-20261021-009,2026-10-21,quarta-feira,H02,Opioide injetável (controlado),Medicamento controlado,alta,False,True,1,0.8,0.8
+PED-20261021-010,2026-10-21,quarta-feira,H02,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,1,12.0,12.0
+PED-20261021-011,2026-10-21,quarta-feira,H02,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261021-012,2026-10-21,quarta-feira,H02,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,8,5.0,40.0
+PED-20261021-013,2026-10-21,quarta-feira,H02,Seringas e agulhas (caixa),Insumo,regular,False,False,6,4.0,24.0
+PED-20261021-014,2026-10-21,quarta-feira,H03,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,5,2.0,10.0
+PED-20261021-015,2026-10-21,quarta-feira,H03,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,5,13.0,65.0
+PED-20261021-016,2026-10-21,quarta-feira,H03,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261021-017,2026-10-21,quarta-feira,H03,Seringas e agulhas (caixa),Insumo,regular,False,False,5,4.0,20.0
+PED-20261021-018,2026-10-21,quarta-feira,H03,Gaze e ataduras (fardo),Insumo,regular,False,False,4,6.0,24.0
+PED-20261021-019,2026-10-21,quarta-feira,H03,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,5,3.0,15.0
+PED-20261021-020,2026-10-21,quarta-feira,H04,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,3,12.0,36.0
+PED-20261021-021,2026-10-21,quarta-feira,H04,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,2,13.0,26.0
+PED-20261021-022,2026-10-21,quarta-feira,H04,Gaze e ataduras (fardo),Insumo,regular,False,False,5,6.0,30.0
+PED-20261021-023,2026-10-21,quarta-feira,H04,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,6,3.0,18.0
+PED-20261021-024,2026-10-21,quarta-feira,H04,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,1,11.0,11.0
+PED-20261021-025,2026-10-21,quarta-feira,H05,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,4,12.0,48.0
+PED-20261021-026,2026-10-21,quarta-feira,H05,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,5,13.0,65.0
+PED-20261021-027,2026-10-21,quarta-feira,H05,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261021-028,2026-10-21,quarta-feira,H05,Gaze e ataduras (fardo),Insumo,regular,False,False,2,6.0,12.0
+PED-20261021-029,2026-10-21,quarta-feira,H07,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,4,2.0,8.0
+PED-20261021-030,2026-10-21,quarta-feira,H07,Opioide injetável (controlado),Medicamento controlado,alta,False,True,3,0.8,2.4
+PED-20261021-031,2026-10-21,quarta-feira,H07,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,4,13.0,52.0
+PED-20261021-032,2026-10-21,quarta-feira,H07,Gaze e ataduras (fardo),Insumo,regular,False,False,5,6.0,30.0
+PED-20261021-033,2026-10-21,quarta-feira,H07,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,5,3.0,15.0
+PED-20261021-034,2026-10-21,quarta-feira,H07,Quimioterápico injetável (kit refrigerado),Medicamento crítico,critica,True,True,5,1.5,7.5
+PED-20261021-035,2026-10-21,quarta-feira,U01,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,7,1.0,7.0
+PED-20261021-036,2026-10-21,quarta-feira,U01,Seringas e agulhas (caixa),Insumo,regular,False,False,1,4.0,4.0
+PED-20261021-037,2026-10-21,quarta-feira,U02,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261021-038,2026-10-21,quarta-feira,U02,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,8,1.0,8.0
+PED-20261021-039,2026-10-21,quarta-feira,U02,Kit curativo especial,Insumo,regular,False,False,3,1.5,4.5
+PED-20261021-040,2026-10-21,quarta-feira,U02,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,2,5.0,10.0
+PED-20261021-041,2026-10-21,quarta-feira,U02,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261021-042,2026-10-21,quarta-feira,U03,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,5,1.2,6.0
+PED-20261021-043,2026-10-21,quarta-feira,U03,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,10,1.0,10.0
+PED-20261021-044,2026-10-21,quarta-feira,U03,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,1,5.0,5.0
+PED-20261021-045,2026-10-21,quarta-feira,U04,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,2,2.5,5.0
+PED-20261021-046,2026-10-21,quarta-feira,U04,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,4,1.2,4.8
+PED-20261021-047,2026-10-21,quarta-feira,U04,Kit curativo especial,Insumo,regular,False,False,5,1.5,7.5
+PED-20261021-048,2026-10-21,quarta-feira,U04,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261021-049,2026-10-21,quarta-feira,U04,Gaze e ataduras (fardo),Insumo,regular,False,False,2,6.0,12.0
+PED-20261021-050,2026-10-21,quarta-feira,U06,Vacinas (caixa térmica),Imunobiológico,alta,True,False,3,4.0,12.0
+PED-20261021-051,2026-10-21,quarta-feira,U06,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261021-052,2026-10-21,quarta-feira,U06,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,6,1.2,7.2
+PED-20261021-053,2026-10-21,quarta-feira,U06,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,7,1.0,7.0
+PED-20261021-054,2026-10-21,quarta-feira,U09,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261021-055,2026-10-21,quarta-feira,U09,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,9,1.0,9.0
+PED-20261021-056,2026-10-21,quarta-feira,U09,Seringas e agulhas (caixa),Insumo,regular,False,False,1,4.0,4.0
+PED-20261021-057,2026-10-21,quarta-feira,U09,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,1,3.0,3.0
+PED-20261021-058,2026-10-21,quarta-feira,U10,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,10,1.2,12.0
+PED-20261021-059,2026-10-21,quarta-feira,U10,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,7,1.0,7.0
+PED-20261021-060,2026-10-21,quarta-feira,U10,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261021-061,2026-10-21,quarta-feira,U10,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,2,3.0,6.0
+PED-20261021-062,2026-10-21,quarta-feira,U13,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261021-063,2026-10-21,quarta-feira,U13,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,6,1.2,7.2
+PED-20261021-064,2026-10-21,quarta-feira,U13,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,4,5.0,20.0
+PED-20261021-065,2026-10-21,quarta-feira,U15,Vacinas (caixa térmica),Imunobiológico,alta,True,False,3,4.0,12.0
+PED-20261021-066,2026-10-21,quarta-feira,U15,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,3,1.2,3.6
+PED-20261021-067,2026-10-21,quarta-feira,U15,Kit curativo especial,Insumo,regular,False,False,5,1.5,7.5
+PED-20261021-068,2026-10-21,quarta-feira,U15,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261021-069,2026-10-21,quarta-feira,U15,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261021-070,2026-10-21,quarta-feira,A01,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,1,5.0,5.0
+PED-20261021-071,2026-10-21,quarta-feira,A02,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261021-072,2026-10-21,quarta-feira,A02,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,2,2.5,5.0
+PED-20261021-073,2026-10-21,quarta-feira,A02,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261021-074,2026-10-21,quarta-feira,A02,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261021-075,2026-10-21,quarta-feira,A02,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,2,3.0,6.0
+PED-20261021-076,2026-10-21,quarta-feira,D02,Kit curativo especial,Insumo,regular,False,False,3,1.5,4.5
+PED-20261021-077,2026-10-21,quarta-feira,D02,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261021-078,2026-10-21,quarta-feira,D05,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261021-079,2026-10-21,quarta-feira,D05,Kit curativo especial,Insumo,regular,False,False,3,1.5,4.5
+PED-20261021-080,2026-10-21,quarta-feira,D07,Oxigênio medicinal (cilindro portátil),Medicamento crítico,critica,False,False,1,9.0,9.0
+PED-20261021-081,2026-10-21,quarta-feira,D07,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261021-082,2026-10-21,quarta-feira,D07,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261021-083,2026-10-21,quarta-feira,D09,Oxigênio medicinal (cilindro portátil),Medicamento crítico,critica,False,False,2,9.0,18.0
+PED-20261021-084,2026-10-21,quarta-feira,D09,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261021-085,2026-10-21,quarta-feira,D09,Kit curativo especial,Insumo,regular,False,False,2,1.5,3.0
+PED-20261021-086,2026-10-21,quarta-feira,D09,Fraldas geriátricas (fardo),Insumo,regular,False,False,3,7.0,21.0
+PED-20261022-001,2026-10-22,quinta-feira,H02,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,4,13.0,52.0
+PED-20261022-002,2026-10-22,quinta-feira,H02,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,7,5.0,35.0
+PED-20261022-003,2026-10-22,quinta-feira,H02,Seringas e agulhas (caixa),Insumo,regular,False,False,4,4.0,16.0
+PED-20261022-004,2026-10-22,quinta-feira,H02,Gaze e ataduras (fardo),Insumo,regular,False,False,2,6.0,12.0
+PED-20261022-005,2026-10-22,quinta-feira,H02,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,5,3.0,15.0
+PED-20261022-006,2026-10-22,quinta-feira,H03,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,3,2.5,7.5
+PED-20261022-007,2026-10-22,quinta-feira,H03,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261022-008,2026-10-22,quinta-feira,H03,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261022-009,2026-10-22,quinta-feira,H03,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261022-010,2026-10-22,quinta-feira,H03,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,6,3.0,18.0
+PED-20261022-011,2026-10-22,quinta-feira,H04,Opioide injetável (controlado),Medicamento controlado,alta,False,True,3,0.8,2.4
+PED-20261022-012,2026-10-22,quinta-feira,H04,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,1,12.0,12.0
+PED-20261022-013,2026-10-22,quinta-feira,H04,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261022-014,2026-10-22,quinta-feira,H04,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261022-015,2026-10-22,quinta-feira,H04,Gaze e ataduras (fardo),Insumo,regular,False,False,4,6.0,24.0
+PED-20261022-016,2026-10-22,quinta-feira,H04,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261022-017,2026-10-22,quinta-feira,H04,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,2,11.0,22.0
+PED-20261022-018,2026-10-22,quinta-feira,H05,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,6,2.0,12.0
+PED-20261022-019,2026-10-22,quinta-feira,H05,Opioide injetável (controlado),Medicamento controlado,alta,False,True,1,0.8,0.8
+PED-20261022-020,2026-10-22,quinta-feira,H05,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,3,12.0,36.0
+PED-20261022-021,2026-10-22,quinta-feira,H05,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,2,2.5,5.0
+PED-20261022-022,2026-10-22,quinta-feira,H05,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,2,13.0,26.0
+PED-20261022-023,2026-10-22,quinta-feira,H05,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261022-024,2026-10-22,quinta-feira,H05,Seringas e agulhas (caixa),Insumo,regular,False,False,5,4.0,20.0
+PED-20261022-025,2026-10-22,quinta-feira,H05,Gaze e ataduras (fardo),Insumo,regular,False,False,5,6.0,30.0
+PED-20261022-026,2026-10-22,quinta-feira,H05,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,5,3.0,15.0
+PED-20261022-027,2026-10-22,quinta-feira,H05,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,1,11.0,11.0
+PED-20261022-028,2026-10-22,quinta-feira,H06,Opioide injetável (controlado),Medicamento controlado,alta,False,True,3,0.8,2.4
+PED-20261022-029,2026-10-22,quinta-feira,H06,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,3,12.0,36.0
+PED-20261022-030,2026-10-22,quinta-feira,H06,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,5,13.0,65.0
+PED-20261022-031,2026-10-22,quinta-feira,H06,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,7,5.0,35.0
+PED-20261022-032,2026-10-22,quinta-feira,H06,Seringas e agulhas (caixa),Insumo,regular,False,False,6,4.0,24.0
+PED-20261022-033,2026-10-22,quinta-feira,H06,Gaze e ataduras (fardo),Insumo,regular,False,False,5,6.0,30.0
+PED-20261022-034,2026-10-22,quinta-feira,H06,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,2,3.0,6.0
+PED-20261022-035,2026-10-22,quinta-feira,H07,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,4,2.0,8.0
+PED-20261022-036,2026-10-22,quinta-feira,H07,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,6,5.0,30.0
+PED-20261022-037,2026-10-22,quinta-feira,H07,Gaze e ataduras (fardo),Insumo,regular,False,False,4,6.0,24.0
+PED-20261022-038,2026-10-22,quinta-feira,H07,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,2,11.0,22.0
+PED-20261022-039,2026-10-22,quinta-feira,H07,Quimioterápico injetável (kit refrigerado),Medicamento crítico,critica,True,True,4,1.5,6.0
+PED-20261022-040,2026-10-22,quinta-feira,U03,Vacinas (caixa térmica),Imunobiológico,alta,True,False,3,4.0,12.0
+PED-20261022-041,2026-10-22,quinta-feira,U03,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261022-042,2026-10-22,quinta-feira,U03,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,9,1.2,10.8
+PED-20261022-043,2026-10-22,quinta-feira,U03,Kit curativo especial,Insumo,regular,False,False,4,1.5,6.0
+PED-20261022-044,2026-10-22,quinta-feira,U03,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,4,5.0,20.0
+PED-20261022-045,2026-10-22,quinta-feira,U03,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261022-046,2026-10-22,quinta-feira,U04,Vacinas (caixa térmica),Imunobiológico,alta,True,False,1,4.0,4.0
+PED-20261022-047,2026-10-22,quinta-feira,U04,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,3,2.5,7.5
+PED-20261022-048,2026-10-22,quinta-feira,U04,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,6,1.2,7.2
+PED-20261022-049,2026-10-22,quinta-feira,U04,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,9,1.0,9.0
+PED-20261022-050,2026-10-22,quinta-feira,U04,Kit curativo especial,Insumo,regular,False,False,2,1.5,3.0
+PED-20261022-051,2026-10-22,quinta-feira,U04,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261022-052,2026-10-22,quinta-feira,U04,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261022-053,2026-10-22,quinta-feira,U05,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261022-054,2026-10-22,quinta-feira,U05,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,4,1.2,4.8
+PED-20261022-055,2026-10-22,quinta-feira,U05,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,6,1.0,6.0
+PED-20261022-056,2026-10-22,quinta-feira,U05,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,4,5.0,20.0
+PED-20261022-057,2026-10-22,quinta-feira,U05,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261022-058,2026-10-22,quinta-feira,U05,Gaze e ataduras (fardo),Insumo,regular,False,False,2,6.0,12.0
+PED-20261022-059,2026-10-22,quinta-feira,U06,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261022-060,2026-10-22,quinta-feira,U06,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,10,1.0,10.0
+PED-20261022-061,2026-10-22,quinta-feira,U06,Kit curativo especial,Insumo,regular,False,False,5,1.5,7.5
+PED-20261022-062,2026-10-22,quinta-feira,U06,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,4,5.0,20.0
+PED-20261022-063,2026-10-22,quinta-feira,U06,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261022-064,2026-10-22,quinta-feira,U07,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261022-065,2026-10-22,quinta-feira,U07,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,3,1.2,3.6
+PED-20261022-066,2026-10-22,quinta-feira,U07,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,3,1.0,3.0
+PED-20261022-067,2026-10-22,quinta-feira,U07,Kit curativo especial,Insumo,regular,False,False,3,1.5,4.5
+PED-20261022-068,2026-10-22,quinta-feira,U07,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261022-069,2026-10-22,quinta-feira,U07,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,1,3.0,3.0
+PED-20261022-070,2026-10-22,quinta-feira,U10,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261022-071,2026-10-22,quinta-feira,U10,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,3,1.2,3.6
+PED-20261022-072,2026-10-22,quinta-feira,U10,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,9,1.0,9.0
+PED-20261022-073,2026-10-22,quinta-feira,U10,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,1,5.0,5.0
+PED-20261022-074,2026-10-22,quinta-feira,U10,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,2,3.0,6.0
+PED-20261022-075,2026-10-22,quinta-feira,U16,Vacinas (caixa térmica),Imunobiológico,alta,True,False,1,4.0,4.0
+PED-20261022-076,2026-10-22,quinta-feira,U16,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,4,2.5,10.0
+PED-20261022-077,2026-10-22,quinta-feira,U16,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,9,1.2,10.8
+PED-20261022-078,2026-10-22,quinta-feira,U16,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261022-079,2026-10-22,quinta-feira,A01,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261022-080,2026-10-22,quinta-feira,A01,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261022-081,2026-10-22,quinta-feira,A01,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261022-082,2026-10-22,quinta-feira,A04,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,2,2.0,4.0
+PED-20261022-083,2026-10-22,quinta-feira,A04,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261022-084,2026-10-22,quinta-feira,A04,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261022-085,2026-10-22,quinta-feira,A04,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,2,2.5,5.0
+PED-20261022-086,2026-10-22,quinta-feira,A04,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261022-087,2026-10-22,quinta-feira,D01,Fraldas geriátricas (fardo),Insumo,regular,False,False,1,7.0,7.0
+PED-20261022-088,2026-10-22,quinta-feira,D02,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261022-089,2026-10-22,quinta-feira,D02,Kit curativo especial,Insumo,regular,False,False,2,1.5,3.0
+PED-20261022-090,2026-10-22,quinta-feira,D06,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,2,12.0,24.0
+PED-20261022-091,2026-10-22,quinta-feira,D06,Fraldas geriátricas (fardo),Insumo,regular,False,False,1,7.0,7.0
+PED-20261022-092,2026-10-22,quinta-feira,D10,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261022-093,2026-10-22,quinta-feira,D10,Fraldas geriátricas (fardo),Insumo,regular,False,False,2,7.0,14.0
+PED-20261022-094,2026-10-22,quinta-feira,D12,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,2,12.0,24.0
+PED-20261022-095,2026-10-22,quinta-feira,D12,Fraldas geriátricas (fardo),Insumo,regular,False,False,2,7.0,14.0
+PED-20261022-096,2026-10-22,quinta-feira,D13,Kit curativo especial,Insumo,regular,False,False,2,1.5,3.0
+PED-20261022-097,2026-10-22,quinta-feira,D13,Fraldas geriátricas (fardo),Insumo,regular,False,False,2,7.0,14.0
+PED-20261023-001,2026-10-23,sexta-feira,H01,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,2,13.0,26.0
+PED-20261023-002,2026-10-23,sexta-feira,H01,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,7,5.0,35.0
+PED-20261023-003,2026-10-23,sexta-feira,H02,Opioide injetável (controlado),Medicamento controlado,alta,False,True,1,0.8,0.8
+PED-20261023-004,2026-10-23,sexta-feira,H02,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,1,12.0,12.0
+PED-20261023-005,2026-10-23,sexta-feira,H02,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,4,13.0,52.0
+PED-20261023-006,2026-10-23,sexta-feira,H02,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,6,5.0,30.0
+PED-20261023-007,2026-10-23,sexta-feira,H02,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261023-008,2026-10-23,sexta-feira,H02,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,5,3.0,15.0
+PED-20261023-009,2026-10-23,sexta-feira,H02,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,2,11.0,22.0
+PED-20261023-010,2026-10-23,sexta-feira,H03,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,4,2.0,8.0
+PED-20261023-011,2026-10-23,sexta-feira,H03,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261023-012,2026-10-23,sexta-feira,H03,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,6,5.0,30.0
+PED-20261023-013,2026-10-23,sexta-feira,H03,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261023-014,2026-10-23,sexta-feira,H04,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261023-015,2026-10-23,sexta-feira,H04,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261023-016,2026-10-23,sexta-feira,H04,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,5,3.0,15.0
+PED-20261023-017,2026-10-23,sexta-feira,H05,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,5,2.0,10.0
+PED-20261023-018,2026-10-23,sexta-feira,H05,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261023-019,2026-10-23,sexta-feira,H05,Gaze e ataduras (fardo),Insumo,regular,False,False,4,6.0,24.0
+PED-20261023-020,2026-10-23,sexta-feira,H05,Álcool 70% (caixa c/ 12 L),Insumo,regular,False,False,1,11.0,11.0
+PED-20261023-021,2026-10-23,sexta-feira,H07,Opioide injetável (controlado),Medicamento controlado,alta,False,True,3,0.8,2.4
+PED-20261023-022,2026-10-23,sexta-feira,H07,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,3,12.0,36.0
+PED-20261023-023,2026-10-23,sexta-feira,H07,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261023-024,2026-10-23,sexta-feira,H07,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,3,13.0,39.0
+PED-20261023-025,2026-10-23,sexta-feira,H07,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261023-026,2026-10-23,sexta-feira,H07,Gaze e ataduras (fardo),Insumo,regular,False,False,4,6.0,24.0
+PED-20261023-027,2026-10-23,sexta-feira,H07,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,4,3.0,12.0
+PED-20261023-028,2026-10-23,sexta-feira,H07,Quimioterápico injetável (kit refrigerado),Medicamento crítico,critica,True,True,3,1.5,4.5
+PED-20261023-029,2026-10-23,sexta-feira,U02,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,5,1.2,6.0
+PED-20261023-030,2026-10-23,sexta-feira,U02,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,6,1.0,6.0
+PED-20261023-031,2026-10-23,sexta-feira,U02,Kit curativo especial,Insumo,regular,False,False,2,1.5,3.0
+PED-20261023-032,2026-10-23,sexta-feira,U03,Vacinas (caixa térmica),Imunobiológico,alta,True,False,1,4.0,4.0
+PED-20261023-033,2026-10-23,sexta-feira,U03,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,6,1.2,7.2
+PED-20261023-034,2026-10-23,sexta-feira,U03,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,8,1.0,8.0
+PED-20261023-035,2026-10-23,sexta-feira,U03,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,1,5.0,5.0
+PED-20261023-036,2026-10-23,sexta-feira,U03,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261023-037,2026-10-23,sexta-feira,U03,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,2,3.0,6.0
+PED-20261023-038,2026-10-23,sexta-feira,U04,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261023-039,2026-10-23,sexta-feira,U04,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,9,1.2,10.8
+PED-20261023-040,2026-10-23,sexta-feira,U04,Kit curativo especial,Insumo,regular,False,False,2,1.5,3.0
+PED-20261023-041,2026-10-23,sexta-feira,U04,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,4,5.0,20.0
+PED-20261023-042,2026-10-23,sexta-feira,U06,Vacinas (caixa térmica),Imunobiológico,alta,True,False,3,4.0,12.0
+PED-20261023-043,2026-10-23,sexta-feira,U06,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,7,1.2,8.4
+PED-20261023-044,2026-10-23,sexta-feira,U06,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261023-045,2026-10-23,sexta-feira,U06,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,1,3.0,3.0
+PED-20261023-046,2026-10-23,sexta-feira,U10,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261023-047,2026-10-23,sexta-feira,U10,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,4,2.5,10.0
+PED-20261023-048,2026-10-23,sexta-feira,U10,Kit curativo especial,Insumo,regular,False,False,4,1.5,6.0
+PED-20261023-049,2026-10-23,sexta-feira,U10,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,3,5.0,15.0
+PED-20261023-050,2026-10-23,sexta-feira,U10,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,1,3.0,3.0
+PED-20261023-051,2026-10-23,sexta-feira,U12,Vacinas (caixa térmica),Imunobiológico,alta,True,False,2,4.0,8.0
+PED-20261023-052,2026-10-23,sexta-feira,U12,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,7,1.0,7.0
+PED-20261023-053,2026-10-23,sexta-feira,U12,Kit curativo especial,Insumo,regular,False,False,3,1.5,4.5
+PED-20261023-054,2026-10-23,sexta-feira,U12,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,4,5.0,20.0
+PED-20261023-055,2026-10-23,sexta-feira,U14,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,3,2.5,7.5
+PED-20261023-056,2026-10-23,sexta-feira,U14,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,6,1.2,7.2
+PED-20261023-057,2026-10-23,sexta-feira,U14,Antidiabéticos orais (caixa c/ 30 cartelas),Medicamento,regular,False,False,6,1.0,6.0
+PED-20261023-058,2026-10-23,sexta-feira,U14,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261023-059,2026-10-23,sexta-feira,U14,Gaze e ataduras (fardo),Insumo,regular,False,False,3,6.0,18.0
+PED-20261023-060,2026-10-23,sexta-feira,U14,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,3,3.0,9.0
+PED-20261023-061,2026-10-23,sexta-feira,U15,Anti-hipertensivos (caixa c/ 30 cartelas),Medicamento,regular,False,False,4,1.2,4.8
+PED-20261023-062,2026-10-23,sexta-feira,U15,Kit curativo especial,Insumo,regular,False,False,4,1.5,6.0
+PED-20261023-063,2026-10-23,sexta-feira,U15,Seringas e agulhas (caixa),Insumo,regular,False,False,2,4.0,8.0
+PED-20261023-064,2026-10-23,sexta-feira,A02,Antibiótico de uso restrito (caixa c/ 25 ampolas),Medicamento crítico,critica,False,False,1,2.0,2.0
+PED-20261023-065,2026-10-23,sexta-feira,A02,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,2,5.0,10.0
+PED-20261023-066,2026-10-23,sexta-feira,A02,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261023-067,2026-10-23,sexta-feira,A02,Máscaras cirúrgicas (caixa),Insumo,regular,False,False,2,3.0,6.0
+PED-20261023-068,2026-10-23,sexta-feira,A04,"Soro fisiológico 0,9% (caixa c/ 24 bolsas)",Insumo,regular,False,False,2,13.0,26.0
+PED-20261023-069,2026-10-23,sexta-feira,A04,Luvas de procedimento (caixa c/ 10 pacotes),Insumo,regular,False,False,4,5.0,20.0
+PED-20261023-070,2026-10-23,sexta-feira,A04,Seringas e agulhas (caixa),Insumo,regular,False,False,3,4.0,12.0
+PED-20261023-071,2026-10-23,sexta-feira,A04,Gaze e ataduras (fardo),Insumo,regular,False,False,1,6.0,6.0
+PED-20261023-072,2026-10-23,sexta-feira,D01,Oxigênio medicinal (cilindro portátil),Medicamento crítico,critica,False,False,1,9.0,9.0
+PED-20261023-073,2026-10-23,sexta-feira,D01,Kit curativo especial,Insumo,regular,False,False,1,1.5,1.5
+PED-20261023-074,2026-10-23,sexta-feira,D06,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,2,12.0,24.0
+PED-20261023-075,2026-10-23,sexta-feira,D06,Kit curativo especial,Insumo,regular,False,False,1,1.5,1.5
+PED-20261023-076,2026-10-23,sexta-feira,D06,Fraldas geriátricas (fardo),Insumo,regular,False,False,3,7.0,21.0
+PED-20261023-077,2026-10-23,sexta-feira,D09,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261023-078,2026-10-23,sexta-feira,D09,Fraldas geriátricas (fardo),Insumo,regular,False,False,3,7.0,21.0
+PED-20261023-079,2026-10-23,sexta-feira,D13,Insulina (caixa térmica c/ 10 frascos),Medicamento,alta,True,False,1,2.5,2.5
+PED-20261023-080,2026-10-23,sexta-feira,D13,Nutrição enteral (caixa c/ 12 frascos),Dieta enteral,alta,False,False,1,12.0,12.0
+PED-20261023-081,2026-10-23,sexta-feira,D13,Fraldas geriátricas (fardo),Insumo,regular,False,False,1,7.0,7.0

@@ -1,0 +1,4 @@
+vehicle_id,model,driver,capacity_kg,autonomy_km,refrigerated,cost_per_km
+VAN-REF-01,Furgão refrigerado (2 a 8 °C),Carlos Mendes,700,120,True,1.85
+VAN-02,Van de carga seca,Ana Ribeiro,900,150,False,1.35
+UTIL-REF-03,Utilitário elétrico com caixa térmica,Bruno Tavares,350,80,True,0.55
