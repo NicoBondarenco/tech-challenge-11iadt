@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c7b99f99d37a4491169d5f114bc850c9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    <div style="position:fixed;bottom:24px;left:24px;z-index:9999;background:#fcfcfb;padding:8px 12px;border:1px solid #e1e0d9;border-radius:6px;font:12px system-ui,sans-serif;color:#52514e;">Número = ordem de visita · contorno escuro = entrega crítica</div>
+    
+            <div class="folium-map" id="map_c7b99f99d37a4491169d5f114bc850c9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c7b99f99d37a4491169d5f114bc850c9 = L.map(
+                "map_c7b99f99d37a4491169d5f114bc850c9",
+                {
+                    center: [-23.55316, -46.650092],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d4837ef78512400765700d520630d427 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d4837ef78512400765700d520630d427.addTo(map_c7b99f99d37a4491169d5f114bc850c9);
+        
+    
+            var feature_group_c532a07d2ba75cd74c86b0f9da4f53be = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_e9a96c4d72d9cd874571e88356e823e4 = L.polyline(
+                [[-23.523, -46.67], [-23.5573, -46.6699], [-23.5745, -46.629], [-23.5885, -46.6345], [-23.5925, -46.642], [-23.6012, -46.6633], [-23.6183, -46.6391], [-23.6462, -46.641], [-23.6525, -46.7083], [-23.644, -46.759], [-23.5966, -46.7203], [-23.5663, -46.6927], [-23.523, -46.67]],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2a78d6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            poly_line_e9a96c4d72d9cd874571e88356e823e4.bindTooltip(
+                `<div>
+                     VAN-REF-01: 62.4 km, retorno às 12:23
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c5dba753f142d7863a87d71c072c98a3 = L.marker(
+                [-23.5573, -46.6699],
+                {
+}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            var div_icon_655abc4e99a259e39dcce74cf269a637 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2a78d6;color:#0b0b0b;border:2px solid #0b0b0b;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e1\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_228ad013b3ef56c895fc651d376fdd2b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_15f77c17fa7c215e4615933b2c8049d3 = $(`<div id="html_15f77c17fa7c215e4615933b2c8049d3" style="width: 100.0%; height: 100.0%;"><b>[H01] Hospital Universitário - Unidade Central</b><br>Hospital · Cerqueira César<br>Prioridade: critica<br>Chegada: 07:12 (prazo 09:00)<br>Peso: 199.4 kg<br>Controlado: exige assinatura</div>`)[0];
+                popup_228ad013b3ef56c895fc651d376fdd2b.setContent(html_15f77c17fa7c215e4615933b2c8049d3);
+            
+        
+
+        marker_c5dba753f142d7863a87d71c072c98a3.bindPopup(popup_228ad013b3ef56c895fc651d376fdd2b)
+        ;
+
+        
+    
+    
+            marker_c5dba753f142d7863a87d71c072c98a3.bindTooltip(
+                `<div>
+                     1. [H01] Hospital Universitário - Unidade Central — 07:12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c5dba753f142d7863a87d71c072c98a3.setIcon(div_icon_655abc4e99a259e39dcce74cf269a637);
+            
+    
+            var marker_84fb6b03c2fe4ea2581bed69c0ed2703 = L.marker(
+                [-23.5745, -46.629],
+                {
+}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            var div_icon_0f59df731ded5d1f794b2c67dda2265a = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2a78d6;color:#0b0b0b;border:2px solid #0b0b0b;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e2\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_969b97b30c1f5e8f5c7acbdcd8e95914 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_25492746ded2063742771d0d22ed00a6 = $(`<div id="html_25492746ded2063742771d0d22ed00a6" style="width: 100.0%; height: 100.0%;"><b>[D03] Paciente domiciliar 03</b><br>Domiciliar · Aclimação<br>Prioridade: critica<br>Chegada: 07:47 (prazo 09:00)<br>Peso: 34.0 kg<br>Refrigerado (2 a 8 °C)</div>`)[0];
+                popup_969b97b30c1f5e8f5c7acbdcd8e95914.setContent(html_25492746ded2063742771d0d22ed00a6);
+            
+        
+
+        marker_84fb6b03c2fe4ea2581bed69c0ed2703.bindPopup(popup_969b97b30c1f5e8f5c7acbdcd8e95914)
+        ;
+
+        
+    
+    
+            marker_84fb6b03c2fe4ea2581bed69c0ed2703.bindTooltip(
+                `<div>
+                     2. [D03] Paciente domiciliar 03 — 07:47
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_84fb6b03c2fe4ea2581bed69c0ed2703.setIcon(div_icon_0f59df731ded5d1f794b2c67dda2265a);
+            
+    
+            var marker_0cf2d79cca54e59ad66e06503d458b8b = L.marker(
+                [-23.5885, -46.6345],
+                {
+}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            var div_icon_cca5d32428a7c527f14dea3b2df756d3 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2a78d6;color:#0b0b0b;border:2px solid #0b0b0b;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e3\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_82d0f837c1b589ba59c364e50b4cd538 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_795ce7a2f30e52703065829db81dcd96 = $(`<div id="html_795ce7a2f30e52703065829db81dcd96" style="width: 100.0%; height: 100.0%;"><b>[H07] Centro Oncológico Vila Mariana</b><br>Hospital · Vila Mariana<br>Prioridade: critica<br>Chegada: 08:07 (prazo 09:00)<br>Peso: 92.0 kg<br>Refrigerado (2 a 8 °C)<br>Controlado: exige assinatura</div>`)[0];
+                popup_82d0f837c1b589ba59c364e50b4cd538.setContent(html_795ce7a2f30e52703065829db81dcd96);
+            
+        
+
+        marker_0cf2d79cca54e59ad66e06503d458b8b.bindPopup(popup_82d0f837c1b589ba59c364e50b4cd538)
+        ;
+
+        
+    
+    
+            marker_0cf2d79cca54e59ad66e06503d458b8b.bindTooltip(
+                `<div>
+                     3. [H07] Centro Oncológico Vila Mariana — 08:07
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0cf2d79cca54e59ad66e06503d458b8b.setIcon(div_icon_cca5d32428a7c527f14dea3b2df756d3);
+            
+    
+            var marker_27af3a5fdc0ae86985e35b220ac3af8d = L.marker(
+                [-23.5925, -46.642],
+                {
+}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            var div_icon_4d0549c4d8bf7a4b8eeb4395887e95d5 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2a78d6;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e4\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_cce1b7b0dee8e237a4f5170a1e723e67 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c1084eee516cd0a4e40bdbeac8bf94ee = $(`<div id="html_c1084eee516cd0a4e40bdbeac8bf94ee" style="width: 100.0%; height: 100.0%;"><b>[D02] Paciente domiciliar 02</b><br>Domiciliar · Vila Mariana<br>Prioridade: alta<br>Chegada: 08:30 (prazo 12:00)<br>Peso: 8.5 kg<br>Refrigerado (2 a 8 °C)</div>`)[0];
+                popup_cce1b7b0dee8e237a4f5170a1e723e67.setContent(html_c1084eee516cd0a4e40bdbeac8bf94ee);
+            
+        
+
+        marker_27af3a5fdc0ae86985e35b220ac3af8d.bindPopup(popup_cce1b7b0dee8e237a4f5170a1e723e67)
+        ;
+
+        
+    
+    
+            marker_27af3a5fdc0ae86985e35b220ac3af8d.bindTooltip(
+                `<div>
+                     4. [D02] Paciente domiciliar 02 — 08:30
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_27af3a5fdc0ae86985e35b220ac3af8d.setIcon(div_icon_4d0549c4d8bf7a4b8eeb4395887e95d5);
+            
+    
+            var marker_16588475d947c8e51ebc7c48f11090ef = L.marker(
+                [-23.6012, -46.6633],
+                {
+}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            var div_icon_446621d3de61fdfa48fd0a323e367203 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2a78d6;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e5\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_320cc959a8d91b95e2aff489852508d0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c06b7810321a4a3dc2a468b3bde18289 = $(`<div id="html_c06b7810321a4a3dc2a468b3bde18289" style="width: 100.0%; height: 100.0%;"><b>[D01] Paciente domiciliar 01</b><br>Domiciliar · Moema<br>Prioridade: alta<br>Chegada: 08:53 (prazo 12:00)<br>Peso: 29.5 kg<br>Refrigerado (2 a 8 °C)</div>`)[0];
+                popup_320cc959a8d91b95e2aff489852508d0.setContent(html_c06b7810321a4a3dc2a468b3bde18289);
+            
+        
+
+        marker_16588475d947c8e51ebc7c48f11090ef.bindPopup(popup_320cc959a8d91b95e2aff489852508d0)
+        ;
+
+        
+    
+    
+            marker_16588475d947c8e51ebc7c48f11090ef.bindTooltip(
+                `<div>
+                     5. [D01] Paciente domiciliar 01 — 08:53
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_16588475d947c8e51ebc7c48f11090ef.setIcon(div_icon_446621d3de61fdfa48fd0a323e367203);
+            
+    
+            var marker_9bc23250d44d8468effce49e70d48480 = L.marker(
+                [-23.6183, -46.6391],
+                {
+}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            var div_icon_54305048343061110f975bda8486e6f2 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2a78d6;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e6\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_7d6a9c83bbaf14573f134196935f0c05 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_19e37aa6dd497f16fbc7986e92aca6b4 = $(`<div id="html_19e37aa6dd497f16fbc7986e92aca6b4" style="width: 100.0%; height: 100.0%;"><b>[U06] UBS Saúde</b><br>UBS · Saúde<br>Prioridade: regular<br>Chegada: 09:18 (prazo 15:00)<br>Peso: 26.4 kg</div>`)[0];
+                popup_7d6a9c83bbaf14573f134196935f0c05.setContent(html_19e37aa6dd497f16fbc7986e92aca6b4);
+            
+        
+
+        marker_9bc23250d44d8468effce49e70d48480.bindPopup(popup_7d6a9c83bbaf14573f134196935f0c05)
+        ;
+
+        
+    
+    
+            marker_9bc23250d44d8468effce49e70d48480.bindTooltip(
+                `<div>
+                     6. [U06] UBS Saúde — 09:18
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9bc23250d44d8468effce49e70d48480.setIcon(div_icon_54305048343061110f975bda8486e6f2);
+            
+    
+            var marker_bdda732678023250ef7c7bf2da7c1c29 = L.marker(
+                [-23.6462, -46.641],
+                {
+}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            var div_icon_fc1e8176c2594737e1391321a74be08a = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2a78d6;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e7\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_7ce2e582dfdbd21218fd0a241e3d8a7e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b9bc0c5297f34843dcbd54402700b9b5 = $(`<div id="html_b9bc0c5297f34843dcbd54402700b9b5" style="width: 100.0%; height: 100.0%;"><b>[U05] UBS Jabaquara</b><br>UBS · Jabaquara<br>Prioridade: alta<br>Chegada: 09:40 (prazo 12:00)<br>Peso: 45.0 kg<br>Refrigerado (2 a 8 °C)</div>`)[0];
+                popup_7ce2e582dfdbd21218fd0a241e3d8a7e.setContent(html_b9bc0c5297f34843dcbd54402700b9b5);
+            
+        
+
+        marker_bdda732678023250ef7c7bf2da7c1c29.bindPopup(popup_7ce2e582dfdbd21218fd0a241e3d8a7e)
+        ;
+
+        
+    
+    
+            marker_bdda732678023250ef7c7bf2da7c1c29.bindTooltip(
+                `<div>
+                     7. [U05] UBS Jabaquara — 09:40
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bdda732678023250ef7c7bf2da7c1c29.setIcon(div_icon_fc1e8176c2594737e1391321a74be08a);
+            
+    
+            var marker_4c20129c1ebf2703b5beb72c8c7dce10 = L.marker(
+                [-23.6525, -46.7083],
+                {
+}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            var div_icon_c5ec378ce7285ad36d6208a800918fe4 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2a78d6;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e8\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_09561950a80139ab4f54a39712baf541 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d6ab36f40f55b59996d1a52edf52584a = $(`<div id="html_d6ab36f40f55b59996d1a52edf52584a" style="width: 100.0%; height: 100.0%;"><b>[H04] Hospital Regional Santo Amaro</b><br>Hospital · Santo Amaro<br>Prioridade: alta<br>Chegada: 10:14 (prazo 12:00)<br>Peso: 210.6 kg<br>Controlado: exige assinatura</div>`)[0];
+                popup_09561950a80139ab4f54a39712baf541.setContent(html_d6ab36f40f55b59996d1a52edf52584a);
+            
+        
+
+        marker_4c20129c1ebf2703b5beb72c8c7dce10.bindPopup(popup_09561950a80139ab4f54a39712baf541)
+        ;
+
+        
+    
+    
+            marker_4c20129c1ebf2703b5beb72c8c7dce10.bindTooltip(
+                `<div>
+                     8. [H04] Hospital Regional Santo Amaro — 10:14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4c20129c1ebf2703b5beb72c8c7dce10.setIcon(div_icon_c5ec378ce7285ad36d6208a800918fe4);
+            
+    
+            var marker_a71314e741bfc7868f53e0e301d3d9e2 = L.marker(
+                [-23.644, -46.759],
+                {
+}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            var div_icon_e5febfe56ee6c27d7ac6c71adf0db87c = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2a78d6;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e9\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_95e7275db01b5f4b27f2492de3b5547d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_269c2f23fe1d56e5738dcf4e4ccfec7d = $(`<div id="html_269c2f23fe1d56e5738dcf4e4ccfec7d" style="width: 100.0%; height: 100.0%;"><b>[D11] Paciente domiciliar 11</b><br>Domiciliar · Campo Limpo<br>Prioridade: regular<br>Chegada: 10:51 (prazo 15:00)<br>Peso: 6.0 kg</div>`)[0];
+                popup_95e7275db01b5f4b27f2492de3b5547d.setContent(html_269c2f23fe1d56e5738dcf4e4ccfec7d);
+            
+        
+
+        marker_a71314e741bfc7868f53e0e301d3d9e2.bindPopup(popup_95e7275db01b5f4b27f2492de3b5547d)
+        ;
+
+        
+    
+    
+            marker_a71314e741bfc7868f53e0e301d3d9e2.bindTooltip(
+                `<div>
+                     9. [D11] Paciente domiciliar 11 — 10:51
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a71314e741bfc7868f53e0e301d3d9e2.setIcon(div_icon_e5febfe56ee6c27d7ac6c71adf0db87c);
+            
+    
+            var marker_146cbcf1b3e0bc023fa06887db13a8f5 = L.marker(
+                [-23.5966, -46.7203],
+                {
+}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            var div_icon_90ba269fd4bd5eaf886a8518b7c058c1 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2a78d6;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e10\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_b33eae14bbc85c536322e44d866d87b2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_14485e21dbfb0f07802b2b4ccf656133 = $(`<div id="html_14485e21dbfb0f07802b2b4ccf656133" style="width: 100.0%; height: 100.0%;"><b>[U16] UBS Morumbi</b><br>UBS · Morumbi<br>Prioridade: alta<br>Chegada: 11:28 (prazo 12:00)<br>Peso: 26.9 kg<br>Refrigerado (2 a 8 °C)</div>`)[0];
+                popup_b33eae14bbc85c536322e44d866d87b2.setContent(html_14485e21dbfb0f07802b2b4ccf656133);
+            
+        
+
+        marker_146cbcf1b3e0bc023fa06887db13a8f5.bindPopup(popup_b33eae14bbc85c536322e44d866d87b2)
+        ;
+
+        
+    
+    
+            marker_146cbcf1b3e0bc023fa06887db13a8f5.bindTooltip(
+                `<div>
+                     10. [U16] UBS Morumbi — 11:28
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_146cbcf1b3e0bc023fa06887db13a8f5.setIcon(div_icon_90ba269fd4bd5eaf886a8518b7c058c1);
+            
+    
+            var marker_f08e42baae3ba8649091df317f2ebb94 = L.marker(
+                [-23.5663, -46.6927],
+                {
+}
+            ).addTo(feature_group_c532a07d2ba75cd74c86b0f9da4f53be);
+        
+    
+            var div_icon_c598d94a8ee2f083621c8ffef83043a8 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2a78d6;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e11\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_b42b98c8da03230fa277680b86cce526 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_93c68cec88b32859ca8bb15bde45c083 = $(`<div id="html_93c68cec88b32859ca8bb15bde45c083" style="width: 100.0%; height: 100.0%;"><b>[U01] UBS Pinheiros</b><br>UBS · Pinheiros<br>Prioridade: regular<br>Chegada: 11:54 (prazo 15:00)<br>Peso: 10.0 kg</div>`)[0];
+                popup_b42b98c8da03230fa277680b86cce526.setContent(html_93c68cec88b32859ca8bb15bde45c083);
+            
+        
+
+        marker_f08e42baae3ba8649091df317f2ebb94.bindPopup(popup_b42b98c8da03230fa277680b86cce526)
+        ;
+
+        
+    
+    
+            marker_f08e42baae3ba8649091df317f2ebb94.bindTooltip(
+                `<div>
+                     11. [U01] UBS Pinheiros — 11:54
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f08e42baae3ba8649091df317f2ebb94.setIcon(div_icon_c598d94a8ee2f083621c8ffef83043a8);
+            
+    
+            feature_group_c532a07d2ba75cd74c86b0f9da4f53be.addTo(map_c7b99f99d37a4491169d5f114bc850c9);
+        
+    
+            var feature_group_960d1016c3bfbe6b0a9ff31fc493eed3 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_b65c3232a5a0aa95d0a91c84ba81d1c0 = L.polyline(
+                [[-23.523, -46.67], [-23.5594, -46.5986], [-23.5135, -46.5807], [-23.4637, -46.5797], [-23.4801, -46.6036], [-23.5005, -46.6253], [-23.4874, -46.7262], [-23.5234, -46.7031], [-23.553, -46.69], [-23.523, -46.67]],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#eb6834", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_960d1016c3bfbe6b0a9ff31fc493eed3);
+        
+    
+            poly_line_b65c3232a5a0aa95d0a91c84ba81d1c0.bindTooltip(
+                `<div>
+                     VAN-02: 62.4 km, retorno às 11:35
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e88f55fcded234e2021159594ec863df = L.marker(
+                [-23.5594, -46.5986],
+                {
+}
+            ).addTo(feature_group_960d1016c3bfbe6b0a9ff31fc493eed3);
+        
+    
+            var div_icon_99743c113934caa1538408ec8c42f8a0 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#eb6834;color:#0b0b0b;border:2px solid #0b0b0b;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e1\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_dcd104c843a57a66fb3c5071cf603d4a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bc11bffb15aa90641a60b85a7e5ed2ce = $(`<div id="html_bc11bffb15aa90641a60b85a7e5ed2ce" style="width: 100.0%; height: 100.0%;"><b>[H02] Hospital Dia Mooca</b><br>Hospital · Mooca<br>Prioridade: critica<br>Chegada: 07:27 (prazo 09:00)<br>Peso: 144.0 kg</div>`)[0];
+                popup_dcd104c843a57a66fb3c5071cf603d4a.setContent(html_bc11bffb15aa90641a60b85a7e5ed2ce);
+            
+        
+
+        marker_e88f55fcded234e2021159594ec863df.bindPopup(popup_dcd104c843a57a66fb3c5071cf603d4a)
+        ;
+
+        
+    
+    
+            marker_e88f55fcded234e2021159594ec863df.bindTooltip(
+                `<div>
+                     1. [H02] Hospital Dia Mooca — 07:27
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e88f55fcded234e2021159594ec863df.setIcon(div_icon_99743c113934caa1538408ec8c42f8a0);
+            
+    
+            var marker_83c5b37c2c90e820972bf0f86880063e = L.marker(
+                [-23.5135, -46.5807],
+                {
+}
+            ).addTo(feature_group_960d1016c3bfbe6b0a9ff31fc493eed3);
+        
+    
+            var div_icon_28d51cde9c064b5128e61ebf94c96171 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#eb6834;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e2\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_5588f3b4e1ccd8d50d8be82895b69f99 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_013cc0de08d992f68d514951815ebc34 = $(`<div id="html_013cc0de08d992f68d514951815ebc34" style="width: 100.0%; height: 100.0%;"><b>[U10] UBS Vila Maria</b><br>UBS · Vila Maria<br>Prioridade: regular<br>Chegada: 08:04 (prazo 15:00)<br>Peso: 38.4 kg</div>`)[0];
+                popup_5588f3b4e1ccd8d50d8be82895b69f99.setContent(html_013cc0de08d992f68d514951815ebc34);
+            
+        
+
+        marker_83c5b37c2c90e820972bf0f86880063e.bindPopup(popup_5588f3b4e1ccd8d50d8be82895b69f99)
+        ;
+
+        
+    
+    
+            marker_83c5b37c2c90e820972bf0f86880063e.bindTooltip(
+                `<div>
+                     2. [U10] UBS Vila Maria — 08:04
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_83c5b37c2c90e820972bf0f86880063e.setIcon(div_icon_28d51cde9c064b5128e61ebf94c96171);
+            
+    
+            var marker_279ad4edf1c2d9afc39cf541e7319ca2 = L.marker(
+                [-23.4637, -46.5797],
+                {
+}
+            ).addTo(feature_group_960d1016c3bfbe6b0a9ff31fc493eed3);
+        
+    
+            var div_icon_34017e8554dbd06507e32a9cef2a2b9a = L.divIcon({
+  "html": "\u003cdiv style=\"background:#eb6834;color:#0b0b0b;border:2px solid #0b0b0b;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e3\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_ed6c7e1a112931dde1738603d33b48cd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3d646ebc24e8f39fa74fccf54f06e1af = $(`<div id="html_3d646ebc24e8f39fa74fccf54f06e1af" style="width: 100.0%; height: 100.0%;"><b>[A04] AMA Jaçanã</b><br>AMA · Jaçanã<br>Prioridade: critica<br>Chegada: 08:34 (prazo 09:00)<br>Peso: 22.0 kg</div>`)[0];
+                popup_ed6c7e1a112931dde1738603d33b48cd.setContent(html_3d646ebc24e8f39fa74fccf54f06e1af);
+            
+        
+
+        marker_279ad4edf1c2d9afc39cf541e7319ca2.bindPopup(popup_ed6c7e1a112931dde1738603d33b48cd)
+        ;
+
+        
+    
+    
+            marker_279ad4edf1c2d9afc39cf541e7319ca2.bindTooltip(
+                `<div>
+                     3. [A04] AMA Jaçanã — 08:34
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_279ad4edf1c2d9afc39cf541e7319ca2.setIcon(div_icon_34017e8554dbd06507e32a9cef2a2b9a);
+            
+    
+            var marker_1e2df7ff08eb163b69c4359eb294169c = L.marker(
+                [-23.4801, -46.6036],
+                {
+}
+            ).addTo(feature_group_960d1016c3bfbe6b0a9ff31fc493eed3);
+        
+    
+            var div_icon_6fc8660f5dc76c4e49a854edbe69cec4 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#eb6834;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e4\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_734f62340cfddb079e1248e957526907 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3091a48ff00bd09681aa845c73646b0a = $(`<div id="html_3091a48ff00bd09681aa845c73646b0a" style="width: 100.0%; height: 100.0%;"><b>[U14] UBS Tucuruvi</b><br>UBS · Tucuruvi<br>Prioridade: regular<br>Chegada: 08:56 (prazo 15:00)<br>Peso: 28.0 kg</div>`)[0];
+                popup_734f62340cfddb079e1248e957526907.setContent(html_3091a48ff00bd09681aa845c73646b0a);
+            
+        
+
+        marker_1e2df7ff08eb163b69c4359eb294169c.bindPopup(popup_734f62340cfddb079e1248e957526907)
+        ;
+
+        
+    
+    
+            marker_1e2df7ff08eb163b69c4359eb294169c.bindTooltip(
+                `<div>
+                     4. [U14] UBS Tucuruvi — 08:56
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1e2df7ff08eb163b69c4359eb294169c.setIcon(div_icon_6fc8660f5dc76c4e49a854edbe69cec4);
+            
+    
+            var marker_450ab1348eb864525de1448129d2e7b6 = L.marker(
+                [-23.5005, -46.6253],
+                {
+}
+            ).addTo(feature_group_960d1016c3bfbe6b0a9ff31fc493eed3);
+        
+    
+            var div_icon_9665c44e12bb8b12a156aade66de2df8 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#eb6834;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e5\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_a0686c4bdf11181b4add1181ec45323d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cb9060b27c2d9f6b654f7e542263ba11 = $(`<div id="html_cb9060b27c2d9f6b654f7e542263ba11" style="width: 100.0%; height: 100.0%;"><b>[H03] Pronto-Socorro Santana</b><br>Hospital · Santana<br>Prioridade: alta<br>Chegada: 09:18 (prazo 12:00)<br>Peso: 93.8 kg<br>Controlado: exige assinatura</div>`)[0];
+                popup_a0686c4bdf11181b4add1181ec45323d.setContent(html_cb9060b27c2d9f6b654f7e542263ba11);
+            
+        
+
+        marker_450ab1348eb864525de1448129d2e7b6.bindPopup(popup_a0686c4bdf11181b4add1181ec45323d)
+        ;
+
+        
+    
+    
+            marker_450ab1348eb864525de1448129d2e7b6.bindTooltip(
+                `<div>
+                     5. [H03] Pronto-Socorro Santana — 09:18
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_450ab1348eb864525de1448129d2e7b6.setIcon(div_icon_9665c44e12bb8b12a156aade66de2df8);
+            
+    
+            var marker_be48fc0d5cf7ab4ce8bbc774d565447b = L.marker(
+                [-23.4874, -46.7262],
+                {
+}
+            ).addTo(feature_group_960d1016c3bfbe6b0a9ff31fc493eed3);
+        
+    
+            var div_icon_219516ab0b138eeb56a04e98eabb56c1 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#eb6834;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e6\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_6a96c3e4f7657c160430997ba85f2960 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b6402fac45f424c0166677e2873b23d8 = $(`<div id="html_b6402fac45f424c0166677e2873b23d8" style="width: 100.0%; height: 100.0%;"><b>[U13] UBS Pirituba</b><br>UBS · Pirituba<br>Prioridade: regular<br>Chegada: 10:12 (prazo 15:00)<br>Peso: 24.5 kg</div>`)[0];
+                popup_6a96c3e4f7657c160430997ba85f2960.setContent(html_b6402fac45f424c0166677e2873b23d8);
+            
+        
+
+        marker_be48fc0d5cf7ab4ce8bbc774d565447b.bindPopup(popup_6a96c3e4f7657c160430997ba85f2960)
+        ;
+
+        
+    
+    
+            marker_be48fc0d5cf7ab4ce8bbc774d565447b.bindTooltip(
+                `<div>
+                     6. [U13] UBS Pirituba — 10:12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_be48fc0d5cf7ab4ce8bbc774d565447b.setIcon(div_icon_219516ab0b138eeb56a04e98eabb56c1);
+            
+    
+            var marker_9c76ac799ec2407b935fded6f83fd9f7 = L.marker(
+                [-23.5234, -46.7031],
+                {
+}
+            ).addTo(feature_group_960d1016c3bfbe6b0a9ff31fc493eed3);
+        
+    
+            var div_icon_9df2ff5378ac189e98ba0c242f3f55f3 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#eb6834;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e7\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_24326a63f22905c90e030233c92592d2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c3cfd716ee57007537841ec55fe96726 = $(`<div id="html_c3cfd716ee57007537841ec55fe96726" style="width: 100.0%; height: 100.0%;"><b>[H06] Hospital Dia Lapa</b><br>Hospital · Lapa<br>Prioridade: alta<br>Chegada: 10:39 (prazo 12:00)<br>Peso: 131.8 kg<br>Controlado: exige assinatura</div>`)[0];
+                popup_24326a63f22905c90e030233c92592d2.setContent(html_c3cfd716ee57007537841ec55fe96726);
+            
+        
+
+        marker_9c76ac799ec2407b935fded6f83fd9f7.bindPopup(popup_24326a63f22905c90e030233c92592d2)
+        ;
+
+        
+    
+    
+            marker_9c76ac799ec2407b935fded6f83fd9f7.bindTooltip(
+                `<div>
+                     7. [H06] Hospital Dia Lapa — 10:39
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9c76ac799ec2407b935fded6f83fd9f7.setIcon(div_icon_9df2ff5378ac189e98ba0c242f3f55f3);
+            
+    
+            var marker_8ceda8b515e614a29377c7029644ec5c = L.marker(
+                [-23.553, -46.69],
+                {
+}
+            ).addTo(feature_group_960d1016c3bfbe6b0a9ff31fc493eed3);
+        
+    
+            var div_icon_ad56ea99454d3a957d6b0f229eb4146a = L.divIcon({
+  "html": "\u003cdiv style=\"background:#eb6834;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e8\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_615d4f493c1da4188cc1b349606b8699 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_672aa5d321ab1a5f126b7cf3ff23f190 = $(`<div id="html_672aa5d321ab1a5f126b7cf3ff23f190" style="width: 100.0%; height: 100.0%;"><b>[U02] UBS Vila Madalena</b><br>UBS · Vila Madalena<br>Prioridade: regular<br>Chegada: 11:11 (prazo 15:00)<br>Peso: 21.5 kg</div>`)[0];
+                popup_615d4f493c1da4188cc1b349606b8699.setContent(html_672aa5d321ab1a5f126b7cf3ff23f190);
+            
+        
+
+        marker_8ceda8b515e614a29377c7029644ec5c.bindPopup(popup_615d4f493c1da4188cc1b349606b8699)
+        ;
+
+        
+    
+    
+            marker_8ceda8b515e614a29377c7029644ec5c.bindTooltip(
+                `<div>
+                     8. [U02] UBS Vila Madalena — 11:11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8ceda8b515e614a29377c7029644ec5c.setIcon(div_icon_ad56ea99454d3a957d6b0f229eb4146a);
+            
+    
+            feature_group_960d1016c3bfbe6b0a9ff31fc493eed3.addTo(map_c7b99f99d37a4491169d5f114bc850c9);
+        
+    
+            var feature_group_077d41d7a5ea29cc0bc89a4b0722f7be = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_7f36529496ba334bc6731c5673c72f37 = L.polyline(
+                [[-23.523, -46.67], [-23.4993, -46.6966], [-23.5108, -46.6562], [-23.511, -46.604], [-23.5255, -46.5432], [-23.5405, -46.576], [-23.523, -46.67]],
+                {"bubblingMouseEvents": true, "color": "#1baf7a", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1baf7a", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_077d41d7a5ea29cc0bc89a4b0722f7be);
+        
+    
+            poly_line_7f36529496ba334bc6731c5673c72f37.bindTooltip(
+                `<div>
+                     UTIL-REF-03: 43.3 km, retorno às 09:59
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d25a87d4ecacf19a1b021da0c7628741 = L.marker(
+                [-23.4993, -46.6966],
+                {
+}
+            ).addTo(feature_group_077d41d7a5ea29cc0bc89a4b0722f7be);
+        
+    
+            var div_icon_8ecc2c8341894af9ff44b74b40a11430 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#1baf7a;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e1\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_14c3241c5814d85a883611cc82c33ba3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_092ad134de7055605f04dd11de7cfb98 = $(`<div id="html_092ad134de7055605f04dd11de7cfb98" style="width: 100.0%; height: 100.0%;"><b>[U12] UBS Freguesia do Ó</b><br>UBS · Freguesia do Ó<br>Prioridade: alta<br>Chegada: 07:12 (prazo 12:00)<br>Peso: 42.4 kg<br>Refrigerado (2 a 8 °C)</div>`)[0];
+                popup_14c3241c5814d85a883611cc82c33ba3.setContent(html_092ad134de7055605f04dd11de7cfb98);
+            
+        
+
+        marker_d25a87d4ecacf19a1b021da0c7628741.bindPopup(popup_14c3241c5814d85a883611cc82c33ba3)
+        ;
+
+        
+    
+    
+            marker_d25a87d4ecacf19a1b021da0c7628741.bindTooltip(
+                `<div>
+                     1. [U12] UBS Freguesia do Ó — 07:12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d25a87d4ecacf19a1b021da0c7628741.setIcon(div_icon_8ecc2c8341894af9ff44b74b40a11430);
+            
+    
+            var marker_2484061abe4ab33ff891ed16632899dd = L.marker(
+                [-23.5108, -46.6562],
+                {
+}
+            ).addTo(feature_group_077d41d7a5ea29cc0bc89a4b0722f7be);
+        
+    
+            var div_icon_439ce8b4a835eb26aff03dd505937a47 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#1baf7a;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e2\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_3f3ac0c04f258e6ab0dfc744f349116e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_030d7f874bc438663fb2c55431254f4e = $(`<div id="html_030d7f874bc438663fb2c55431254f4e" style="width: 100.0%; height: 100.0%;"><b>[U11] UBS Casa Verde</b><br>UBS · Casa Verde<br>Prioridade: alta<br>Chegada: 07:38 (prazo 12:00)<br>Peso: 36.2 kg<br>Refrigerado (2 a 8 °C)</div>`)[0];
+                popup_3f3ac0c04f258e6ab0dfc744f349116e.setContent(html_030d7f874bc438663fb2c55431254f4e);
+            
+        
+
+        marker_2484061abe4ab33ff891ed16632899dd.bindPopup(popup_3f3ac0c04f258e6ab0dfc744f349116e)
+        ;
+
+        
+    
+    
+            marker_2484061abe4ab33ff891ed16632899dd.bindTooltip(
+                `<div>
+                     2. [U11] UBS Casa Verde — 07:38
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2484061abe4ab33ff891ed16632899dd.setIcon(div_icon_439ce8b4a835eb26aff03dd505937a47);
+            
+    
+            var marker_9522497320371e996e2d78b86831add7 = L.marker(
+                [-23.511, -46.604],
+                {
+}
+            ).addTo(feature_group_077d41d7a5ea29cc0bc89a4b0722f7be);
+        
+    
+            var div_icon_ab4ec0eac9a8b99c7cf5c2f5de577b81 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#1baf7a;color:#0b0b0b;border:2px solid #0b0b0b;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e3\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_29753a58249e78cb87fe2980b3ed41c9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_44fb6d5ce37295b9b4cf6f555215dcdd = $(`<div id="html_44fb6d5ce37295b9b4cf6f555215dcdd" style="width: 100.0%; height: 100.0%;"><b>[D08] Paciente domiciliar 08</b><br>Domiciliar · Vila Guilherme<br>Prioridade: critica<br>Chegada: 08:07 (prazo 09:00)<br>Peso: 9.0 kg</div>`)[0];
+                popup_29753a58249e78cb87fe2980b3ed41c9.setContent(html_44fb6d5ce37295b9b4cf6f555215dcdd);
+            
+        
+
+        marker_9522497320371e996e2d78b86831add7.bindPopup(popup_29753a58249e78cb87fe2980b3ed41c9)
+        ;
+
+        
+    
+    
+            marker_9522497320371e996e2d78b86831add7.bindTooltip(
+                `<div>
+                     3. [D08] Paciente domiciliar 08 — 08:07
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9522497320371e996e2d78b86831add7.setIcon(div_icon_ab4ec0eac9a8b99c7cf5c2f5de577b81);
+            
+    
+            var marker_1492fa02a52f9df13aac9dcfd1c07fcd = L.marker(
+                [-23.5255, -46.5432],
+                {
+}
+            ).addTo(feature_group_077d41d7a5ea29cc0bc89a4b0722f7be);
+        
+    
+            var div_icon_4943a5f583101368929edabce87f4c1e = L.divIcon({
+  "html": "\u003cdiv style=\"background:#1baf7a;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e4\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_7acb9683024629e2d1cb812295ef3809 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a2a4c22106345bfe596b78cbc16ef700 = $(`<div id="html_a2a4c22106345bfe596b78cbc16ef700" style="width: 100.0%; height: 100.0%;"><b>[U09] UBS Penha</b><br>UBS · Penha<br>Prioridade: alta<br>Chegada: 08:43 (prazo 12:00)<br>Peso: 48.0 kg<br>Refrigerado (2 a 8 °C)</div>`)[0];
+                popup_7acb9683024629e2d1cb812295ef3809.setContent(html_a2a4c22106345bfe596b78cbc16ef700);
+            
+        
+
+        marker_1492fa02a52f9df13aac9dcfd1c07fcd.bindPopup(popup_7acb9683024629e2d1cb812295ef3809)
+        ;
+
+        
+    
+    
+            marker_1492fa02a52f9df13aac9dcfd1c07fcd.bindTooltip(
+                `<div>
+                     4. [U09] UBS Penha — 08:43
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1492fa02a52f9df13aac9dcfd1c07fcd.setIcon(div_icon_4943a5f583101368929edabce87f4c1e);
+            
+    
+            var marker_afe10c9527b33f54b073ca225202b668 = L.marker(
+                [-23.5405, -46.576],
+                {
+}
+            ).addTo(feature_group_077d41d7a5ea29cc0bc89a4b0722f7be);
+        
+    
+            var div_icon_f8cdda644e4a3d39e5209a7eb753e939 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#1baf7a;color:#0b0b0b;border:2px solid #fcfcfb;border-radius:50%;width:24px;height:24px;line-height:20px;text-align:center;font:600 11px system-ui,sans-serif;box-sizing:border-box;\"\u003e5\u003c/div\u003e",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_910e419ccc7220b346f1421b94284a65 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_34af6c0dada10fa57aa26654084e2963 = $(`<div id="html_34af6c0dada10fa57aa26654084e2963" style="width: 100.0%; height: 100.0%;"><b>[H05] Maternidade Tatuapé</b><br>Hospital · Tatuapé<br>Prioridade: alta<br>Chegada: 09:07 (prazo 12:00)<br>Peso: 199.0 kg<br>Refrigerado (2 a 8 °C)</div>`)[0];
+                popup_910e419ccc7220b346f1421b94284a65.setContent(html_34af6c0dada10fa57aa26654084e2963);
+            
+        
+
+        marker_afe10c9527b33f54b073ca225202b668.bindPopup(popup_910e419ccc7220b346f1421b94284a65)
+        ;
+
+        
+    
+    
+            marker_afe10c9527b33f54b073ca225202b668.bindTooltip(
+                `<div>
+                     5. [H05] Maternidade Tatuapé — 09:07
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_afe10c9527b33f54b073ca225202b668.setIcon(div_icon_f8cdda644e4a3d39e5209a7eb753e939);
+            
+    
+            feature_group_077d41d7a5ea29cc0bc89a4b0722f7be.addTo(map_c7b99f99d37a4491169d5f114bc850c9);
+        
+    
+            var marker_87efdc86b9097c4f3099348c91fa95ba = L.marker(
+                [-23.523, -46.67],
+                {
+}
+            ).addTo(map_c7b99f99d37a4491169d5f114bc850c9);
+        
+    
+            var icon_e7970181388e9ca986b42df8c7e2c3ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_87efdc86b9097c4f3099348c91fa95ba.bindTooltip(
+                `<div>
+                     Centro de Distribuição - Hospital Universitário
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_87efdc86b9097c4f3099348c91fa95ba.setIcon(icon_e7970181388e9ca986b42df8c7e2c3ec);
+            
+    
+            map_c7b99f99d37a4491169d5f114bc850c9.fitBounds(
+                [[-23.6525, -46.759], [-23.4637, -46.5432]],
+                {"padding": [20, 20]}
+            );
+        
+    
+            var layer_control_bc529fd1eee80dab10c1557b207fa58a_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_d4837ef78512400765700d520630d427,
+                },
+                overlays :  {
+                    "\u003cspan style=\"color:#2a78d6\"\u003e\u0026#9632;\u003c/span\u003e VAN-REF-01 \u00b7 Carlos Mendes (11 entregas, 62.4 km)" : feature_group_c532a07d2ba75cd74c86b0f9da4f53be,
+                    "\u003cspan style=\"color:#eb6834\"\u003e\u0026#9632;\u003c/span\u003e VAN-02 \u00b7 Ana Ribeiro (8 entregas, 62.4 km)" : feature_group_960d1016c3bfbe6b0a9ff31fc493eed3,
+                    "\u003cspan style=\"color:#1baf7a\"\u003e\u0026#9632;\u003c/span\u003e UTIL-REF-03 \u00b7 Bruno Tavares (5 entregas, 43.3 km)" : feature_group_077d41d7a5ea29cc0bc89a4b0722f7be,
+                },
+            };
+            let layer_control_bc529fd1eee80dab10c1557b207fa58a = L.control.layers(
+                layer_control_bc529fd1eee80dab10c1557b207fa58a_layers.base_layers,
+                layer_control_bc529fd1eee80dab10c1557b207fa58a_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_c7b99f99d37a4491169d5f114bc850c9);
+
+        
+</script>
+</html>
