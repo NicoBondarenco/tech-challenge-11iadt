@@ -199,6 +199,7 @@ O projeto gera visualizações completas:
 - [Folium](https://python-visualization.github.io/folium/) — mapas interativos geoespaciais
 - [Google Generative AI (Gemini)](https://ai.google.dev/) — integração com LLM
 - [Jupyter Notebook](https://jupyter.org/) / [Google Colab](https://colab.research.google.com/) — ambiente de execução e experimentação
+- [pytest](https://docs.pytest.org/) — testes automatizados
 
 ---
 
@@ -209,13 +210,20 @@ tech-challenge-11iadt/
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
+├── pytest.ini                     # Configuração do pytest
 ├── Doc_Tech_Challenge_Fase_2.pdf
 ├── data/
 │   ├── delivery_fleet.csv         # Especificações da frota de veículos
 │   ├── delivery_locations.csv     # Coordenadas e tempos de atendimento dos locais
 │   └── delivery_orders.csv        # Pedidos semanais de medicamentos e insumos
-└── notebooks/
-    └── tech_challenge_fase2.ipynb # Notebook com implementação completa do AG e LLM
+├── notebooks/
+│   └── tech_challenge_fase2.ipynb # Notebook com implementação completa do AG e LLM
+└── tests/
+    ├── conftest.py                # Carrega as funções do notebook para os testes
+    ├── test_dados.py              # Qualidade e consistência dos CSVs
+    ├── test_modelagem.py          # Cromossomo, distâncias e função fitness
+    ├── test_operadores.py         # Crossover e mutações
+    └── test_algoritmos.py         # Heurísticas e algoritmo genético
 ```
 
 ---
@@ -320,6 +328,45 @@ Abra o notebook `notebooks/tech_challenge_fase2.ipynb` e execute as células seq
 
 ---
 
+## 🧪 Testes Automatizados
+
+Os testes usam **pytest** e validam o próprio código do notebook: o `tests/conftest.py` executa as células de `notebooks/tech_challenge_fase2.ipynb` até a definição dos experimentos e disponibiliza as funções para os testes. Assim não há cópia de código entre o notebook e os testes. A parte de LLM e os experimentos completos (20 execuções) não são executados, o que mantém a suíte rápida e sem depender de chave de API.
+
+### O que é testado (27 testes)
+
+| Arquivo | O que valida |
+|---|---|
+| `tests/test_dados.py` | CSVs sem nulos nem duplicados, pedidos apontando para locais existentes, peso = quantidade × peso unitário e consolidação em 112 entregas |
+| `tests/test_modelagem.py` | Fórmula de Haversine, simetria da matriz de distâncias, codificação/decodificação do cromossomo, consistência entre as duas implementações da fitness e penalidades de cadeia de frio e de carga |
+| `tests/test_operadores.py` | *Order Crossover* e as mutações (troca adjacente, troca, inversão e inserção) sempre geram cromossomos válidos |
+| `tests/test_algoritmos.py` | Vizinho Mais Próximo viável e respeitando a cadeia de frio, 2-opt nunca piora a rota, AG viável, monotônico com elitismo, reprodutível com a mesma semente e melhor que o Vizinho Mais Próximo |
+
+### Como executar
+
+Com o ambiente virtual ativo e as dependências instaladas (seção anterior), na raiz do repositório:
+
+```bash
+pytest
+```
+
+Saída esperada:
+
+```text
+27 passed
+```
+
+Outras formas úteis:
+
+```bash
+pytest -v                          # lista cada teste
+pytest tests/test_operadores.py    # roda um arquivo
+pytest -k crossover                # roda os testes cujo nome contém "crossover"
+```
+
+> **Nota (Linux/macOS):** o `pywinpty` do `requirements.txt` é exclusivo do Windows e por isso usa o marcador `; sys_platform == "win32"`, sendo ignorado nos demais sistemas. Recomenda-se Python 3.12.
+
+---
+
 ## ⚠️ Limitações e Próximos Passos
 
 - **Estimativa de Distâncias:** as distâncias são calculadas via Haversine com fator de tortuosidade ($1{,}3\times$). Uma evolução futura é integrar matrizes de distância reais via API (OSRM ou Google Routes).
@@ -347,6 +394,7 @@ cd tech-challenge-11iadt
 python -m venv .venv
 source .venv/bin/activate  # ou .\.venv\Scripts\Activate.ps1 no Windows
 pip install -r requirements.txt
+pytest                     # roda os testes automatizados
 jupyter notebook notebooks/tech_challenge_fase2.ipynb
 ```
 
